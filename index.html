@@ -1,0 +1,2898 @@
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+17/10/2024 19:47:45 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script><script src="https://animaapp.s3.amazonaws.com/launchpad-static/launchpad.js"></script><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Epilogue:500,400,700,600");
+
+
+@font-face {
+  font-family: "Futura-Bold-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/62494169fb257b1c34729f24/fonts/futura-bold-font.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Futura Md BT-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/60cf4b0d73ed244cdd4d91ff/fonts/futura-md-bt-medium.ttf') format("truetype");
+}
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/671129df16510087aa995fd6.671129e016510087aa995fd9.9QPRdSo.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #2d2d2d;
+  --black-2: #000000;
+  --black-3: #00000033;
+  --fog: #e3ceff;
+  --gossamer: #009379;
+  --grandis: #ffd285;
+  --iron: #d7d7d7;
+  --meteorite: #492578;
+  --quarter-pearl-lusta: #fffcf5;
+  --white: #ffffff;
+  --wild-sand: #f3f3f3;
+ 
+  --font-size-l: 20px;
+  --font-size-m: 17px;
+  --font-size-s: 16px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 27px;
+  --font-size-xxxl: 32px;
+  --font-size-xxxxl: 40px;
+ 
+  --font-family-epilogue: "Epilogue", Helvetica;
+  --font-family-futura-bold-regular: "Futura-Bold-Regular", Helvetica;
+  --font-family-futura_md_bt-medium: "Futura Md BT-Medium", Helvetica;
+}
+.subtitle {
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+
+.body-text {
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+.h3 {
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+
+.h2 {
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.futura-bold-regular-normal-thunder-20px {
+  color: var(--black);
+  font-family: var(--font-family-futura-bold-regular);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.epilogue-bold-thunder-17px {
+  color: var(--black);
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.epilogue-semi-bold-thunder-32px {
+  color: var(--black);
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.futuramdbt-medium-meteorite-24px {
+  color: var(--meteorite);
+  font-family: var(--font-family-futura_md_bt-medium);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.epilogue-semi-bold-fog-16px {
+  color: var(--fog);
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
+}
+
+:root {
+}
+
+
+.author-images {
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-size: cover;
+  border: 1px solid;
+  border-color: var(--iron);
+  border-radius: 100px;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  width: 50px;
+}
+
+.client-card {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 80px;
+  margin-right: -28.00px;
+  position: relative;
+}
+
+.client-info {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 20px;
+  position: relative;
+}
+
+.ellipse {
+  background-color: var(--meteorite);
+  border-radius: 4px;
+  height: 34.78%;
+  position: absolute;
+  width: 32.00%;
+}
+
+.gemma-nolen-google {
+  background-color: transparent;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  position: relative;
+  text-align: left;
+  width: 193px;
+}
+
+.headline-subhead {
+  align-items: flex-start;
+  background-color: transparent;
+  flex-direction: column;
+  position: relative;
+}
+
+.logo {
+  background-color: transparent;
+  position: absolute;
+}
+
+.main-title {
+  background-color: transparent;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 42px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: 249.89915466308594px;
+}
+
+.project-title {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: 315px;
+}
+
+.rate {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.rate-stars {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 5px;
+  position: relative;
+}
+
+.this-is-a-template-f {
+  background-color: transparent;
+  color: var(--black);
+  font-style: normal;
+  position: relative;
+}
+
+.ui-art-drection {
+  background-color: transparent;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  position: relative;
+  text-align: left;
+  width: 315px;
+}
+
+.colored-text {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 5px 0px;
+  position: relative;
+  width: 100%;
+}
+
+.paragraph {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0.00px;
+  line-height: 26px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+}
+
+.span1 {
+  color: var(--black);
+  font-style: normal;
+}
+
+/* screen - 1280px-portfolio-template */
+
+.x1280px-portfolio-template {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  left: 0px;
+  min-width: 1280px;
+  overflow-x: hidden;
+  position: relative;
+  top: 0px;
+}
+
+.x1280px-portfolio-template .navigation-525ISW {
+  align-self: stretch;
+  background-color: var(--white);
+  height: 80px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.x1280px-portfolio-template .nav-nav-menu-Axx9dk {
+  background-color: transparent;
+  height: 28px;
+  position: absolute;
+  right: 28px;
+  top: calc(50.00% - 14px);
+  width: 283px;
+}
+
+.x1280px-portfolio-template .about-oxIlSV {
+  background-color: transparent;
+  cursor: pointer;
+  height: 28px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  right: 217px;
+  text-align: left;
+  top: calc(50.00% - 14px);
+  white-space: nowrap;
+  width: auto;
+}
+
+.x1280px-portfolio-template .work-oxIlSV {
+  background-color: transparent;
+  cursor: pointer;
+  height: 28px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  right: 125px;
+  text-align: left;
+  top: calc(50.00% - 14px);
+  white-space: nowrap;
+  width: auto;
+}
+
+.x1280px-portfolio-template .contact-oxIlSV {
+  background-color: transparent;
+  cursor: pointer;
+  height: 28px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  right: 6px;
+  text-align: left;
+  top: calc(50.00% - 14px);
+  white-space: nowrap;
+  width: auto;
+}
+
+.x1280px-portfolio-template .logo-Axx9dk {
+  height: 30px;
+  left: 50px;
+  top: calc(50.00% - 15px);
+  width: 49px;
+}
+
+.x1280px-portfolio-template .logo-Yp6xXJ {
+  color: var(--black);
+  font-family: var(--font-family-futura-bold-regular);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 400;
+  height: 100%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 526.53%;
+}
+
+.x1280px-portfolio-template .header-525ISW {
+  align-self: stretch;
+  background-color: var(--white);
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  padding: 100px;
+  width: 100%;
+}
+
+.x1280px-portfolio-template .header-q27ZC9 {
+  background-color: transparent;
+  gap: 28px;
+  width: 1080px;
+}
+
+.x1280px-portfolio-template .headline-subhead-Mcz8YJ {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 40px;
+}
+
+.x1280px-portfolio-template .headline-subhead-FpeeTE {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 40px;
+}
+
+.x1280px-portfolio-template .branding-image-making-jAxxkx {
+  background-color: transparent;
+  color: var(--meteorite);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: 557px;
+}
+
+.x1280px-portfolio-template .my-awesome-portfolio-jAxxkx {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-futura-bold-regular);
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+  line-height: 90px;
+  position: relative;
+  text-align: left;
+  width: 557px;
+}
+
+.x1280px-portfolio-template .and-i-made-it-myself-FpeeTE {
+  background-color: transparent;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  position: relative;
+  text-align: left;
+  width: 557px;
+}
+
+.x1280px-portfolio-template .image-Mcz8YJ {
+  background-color: transparent;
+  height: 424px;
+  overflow: hidden;
+  position: relative;
+  width: 495px;
+}
+
+.x1280px-portfolio-template .image-Mcz8YJ video {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.x1280px-portfolio-template .image-Mcz8YJ img {
+  object-fit: cover;
+}
+
+.x1280px-portfolio-template .logos-section-525ISW {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0px 66px;
+  position: relative;
+  width: 100%;
+}
+
+.x1280px-portfolio-template .logos-ji2zIw {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--black-3);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 2px;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0px;
+  position: relative;
+  width: 1078px;
+}
+
+.x1280px-portfolio-template .behance-e2heV5 {
+  height: 34px;
+  position: relative;
+  width: 53.685546875px;
+}
+
+.x1280px-portfolio-template .a4whc0m0-1-e2heV5 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 56px;
+  object-fit: cover;
+  position: relative;
+  width: 108.9501953125px;
+}
+
+.x1280px-portfolio-template .google-e2heV5 {
+  background-color: transparent;
+  height: 34px;
+  position: relative;
+  width: 103.287109375px;
+}
+
+.x1280px-portfolio-template .pinterest-e2heV5 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 90px;
+  position: relative;
+  width: 90px;
+}
+
+.x1280px-portfolio-template .frame-2-525ISW {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: space-around;
+  padding: 0px 62px 0px 0px;
+  position: relative;
+  width: 100%;
+}
+
+.x1280px-portfolio-template .skills-section-49bkE6 {
+  background-color: var(--white);
+  height: 618px;
+  margin-left: -31.00px;
+  margin-right: -31.00px;
+  position: relative;
+  width: 1280px;
+}
+
+.x1280px-portfolio-template .skills-3wnI72 {
+  align-items: flex-start;
+  background-color: var(--white);
+  cursor: pointer;
+  display: inline-flex;
+  gap: 125px;
+  justify-content: center;
+  left: 140px;
+  position: relative;
+  top: 135px;
+}
+
+.x1280px-portfolio-template .skill-DWlbtG {
+  align-items: center;
+  background-color: var(--white);
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.x1280px-portfolio-template .skill-DWlbtG:hover {
+  transform: translate(0, -5px);
+}
+
+.x1280px-portfolio-template .books-Bob90m {
+  background-color: transparent;
+  height: 90px;
+  position: relative;
+  width: 90px;
+}
+
+.x1280px-portfolio-template .skill-Bob90m {
+  background-color: transparent;
+  height: 328px;
+  position: relative;
+  width: 249.89915466308594px;
+}
+
+.x1280px-portfolio-template .headline-subhead-xdvlxS {
+  display: inline-flex;
+  gap: 19px;
+  left: 0px;
+  top: 186px;
+}
+
+.x1280px-portfolio-template .this-is-a-template-f-5SHy82 {
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  width: 249.89915466308594px;
+}
+
+.x1280px-portfolio-template .skill-dxIRt7 {
+  align-items: center;
+  background-color: var(--white);
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.x1280px-portfolio-template .skill-dxIRt7:hover {
+  transform: translate(0, -5px);
+}
+
+.x1280px-portfolio-template .paintbrush-7B6EfY {
+  background-color: transparent;
+  height: 90px;
+  position: relative;
+  width: 90px;
+}
+
+.x1280px-portfolio-template .skill-7B6EfY {
+  background-color: transparent;
+  height: 328px;
+  position: relative;
+  width: 249.89915466308594px;
+}
+
+.x1280px-portfolio-template .headline-subhead-aBF5ee {
+  display: inline-flex;
+  gap: 19px;
+  left: 0px;
+  top: 186px;
+}
+
+.x1280px-portfolio-template .this-is-a-template-f-qJusGb {
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  width: 249.89915466308594px;
+}
+
+.x1280px-portfolio-template .skill-Ce2ag9 {
+  align-items: center;
+  background-color: var(--white);
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.x1280px-portfolio-template .skill-Ce2ag9:hover {
+  transform: translate(0, -5px);
+}
+
+.x1280px-portfolio-template .design-0Yn4LS {
+  background-color: transparent;
+  height: 90px;
+  position: relative;
+  width: 90px;
+}
+
+.x1280px-portfolio-template .skill-0Yn4LS {
+  background-color: transparent;
+  height: 328px;
+  position: relative;
+  width: 249.89915466308594px;
+}
+
+.x1280px-portfolio-template .headline-subhead-xCGrPX {
+  display: inline-flex;
+  gap: 19px;
+  left: 0px;
+  top: 186px;
+}
+
+.x1280px-portfolio-template .this-is-a-template-f-cqvD2v {
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  width: 249.89915466308594px;
+}
+
+.x1280px-portfolio-template .latest-work-section-525ISW {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 60px;
+  padding: 20px 100px;
+  position: relative;
+  width: 100%;
+}
+
+.x1280px-portfolio-template .my-latest-work-wMiMSA {
+  background-color: transparent;
+  color: var(--meteorite);
+  font-family: var(--font-family-futura-bold-regular);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+  line-height: 42px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.x1280px-portfolio-template .work-cards-wMiMSA {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+}
+
+.x1280px-portfolio-template .stripe-1-YiZ8se {
+  background-color: transparent;
+  height: 407px;
+  position: relative;
+  width: 1080px;
+}
+
+.x1280px-portfolio-template .work-card-QHQqx8 {
+  align-items: flex-start;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 25px;
+  left: 0px;
+  pointer-events: auto;
+  position: absolute;
+  top: 0px;
+  transition: all 0.2s ease;
+}
+
+.x1280px-portfolio-template .work-card-QHQqx8:hover {
+  transform: scale(0.9); 
+}
+
+.x1280px-portfolio-template .image-GeVYMN {
+  background-color: transparent;
+  height: 315px;
+  object-fit: cover;
+  position: relative;
+  width: 315px;
+}
+
+.x1280px-portfolio-template .headline-subhead-GeVYMN {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  width: 315px;
+}
+
+.x1280px-portfolio-template .work-card-PYmMqz {
+  align-items: flex-start;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 25px;
+  left: 382px;
+  pointer-events: auto;
+  position: absolute;
+  top: 0px;
+  transition: all 0.2s ease;
+}
+
+.x1280px-portfolio-template .work-card-PYmMqz:hover {
+  transform: scale(0.9); 
+}
+
+.x1280px-portfolio-template .image-RQyJ5p {
+  background-color: transparent;
+  height: 315px;
+  object-fit: cover;
+  position: relative;
+  width: 315px;
+}
+
+.x1280px-portfolio-template .headline-subhead-RQyJ5p {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  width: 315px;
+}
+
+.x1280px-portfolio-template .work-card-WOFF8T {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 25px;
+  left: 382px;
+  position: absolute;
+  top: 0px;
+}
+
+.x1280px-portfolio-template .image-JEPP3f {
+  background-color: transparent;
+  height: 315px;
+  object-fit: cover;
+  position: relative;
+  width: 315px;
+}
+
+.x1280px-portfolio-template .headline-subhead-JEPP3f {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  width: 315px;
+}
+
+.x1280px-portfolio-template .work-card-pdOsRL {
+  align-items: flex-start;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 25px;
+  left: 765px;
+  pointer-events: auto;
+  position: absolute;
+  top: 0px;
+  transition: all 0.2s ease;
+}
+
+.x1280px-portfolio-template .work-card-pdOsRL:hover {
+  transform: scale(0.9); 
+}
+
+.x1280px-portfolio-template .image-7Hcalr {
+  background-color: transparent;
+  height: 315px;
+  object-fit: cover;
+  position: relative;
+  width: 315px;
+}
+
+.x1280px-portfolio-template .headline-subhead-7Hcalr {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  width: 315px;
+}
+
+.x1280px-portfolio-template .stripe-2-YiZ8se {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 67.5px;
+  position: relative;
+}
+
+.x1280px-portfolio-template .work-card-4zJZu5 {
+  align-items: flex-start;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 25px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.x1280px-portfolio-template .work-card-4zJZu5:hover {
+  transform: scale(0.9); 
+}
+
+.x1280px-portfolio-template .image-xo40A9 {
+  background-color: transparent;
+  height: 315px;
+  object-fit: cover;
+  position: relative;
+  width: 315px;
+}
+
+.x1280px-portfolio-template .headline-subhead-xo40A9 {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  width: 315px;
+}
+
+.x1280px-portfolio-template .work-card-wNs8AZ {
+  align-items: flex-start;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 25px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.x1280px-portfolio-template .work-card-wNs8AZ:hover {
+  transform: scale(0.9); 
+}
+
+.x1280px-portfolio-template .image-xnREng {
+  background-color: transparent;
+  height: 315px;
+  object-fit: cover;
+  position: relative;
+  width: 315px;
+}
+
+.x1280px-portfolio-template .headline-subhead-xnREng {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  width: 315px;
+}
+
+.x1280px-portfolio-template .work-card-EvhR3a {
+  align-items: flex-start;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 25px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.x1280px-portfolio-template .work-card-EvhR3a:hover {
+  transform: scale(0.9); 
+}
+
+.x1280px-portfolio-template .image-1W6ZOY {
+  background-color: transparent;
+  height: 315px;
+  position: relative;
+  width: 315px;
+}
+
+.x1280px-portfolio-template .headline-subhead-1W6ZOY {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  width: 315px;
+}
+
+.x1280px-portfolio-template .clients-section-525ISW {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  padding: 100px 100px 150px;
+  position: relative;
+  width: 100%;
+}
+
+.x1280px-portfolio-template .client-cards-rtQTco {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 55px;
+  position: relative;
+}
+
+.x1280px-portfolio-template .clients-SSM13z {
+  background-color: transparent;
+  height: 26.979110717773438px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 113px;
+}
+
+.x1280px-portfolio-template .clients-cards-SSM13z {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 67.5px;
+  position: relative;
+}
+
+.x1280px-portfolio-template .this-is-a-template-f-iOZh3Y {
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  text-align: left;
+  width: 263px;
+}
+
+.x1280px-portfolio-template .author-images-LxwGUM {
+  background-image: url(https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67113be9cffb64ecc21eb45e/img/property-author-image-1-2@2x.png);
+}
+
+.x1280px-portfolio-template .star-d3QE9v {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x1280px-portfolio-template .star-NjG8s3 {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x1280px-portfolio-template .star-y2r4xN {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x1280px-portfolio-template .star-IMW2V8 {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x1280px-portfolio-template .star-OdwoHZ {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x1280px-portfolio-template .star-2Fnw39 {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x1280px-portfolio-template .star-uvK1BR {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x1280px-portfolio-template .star-wT62aR {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x1280px-portfolio-template .star-85mGhA {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x1280px-portfolio-template .star-xFxYDc {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x1280px-portfolio-template .this-is-a-template-f-kKGtuY {
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  text-align: left;
+  width: 263px;
+}
+
+.x1280px-portfolio-template .author-images-OLDYja {
+  background-image: url(https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67113be9cffb64ecc21eb45e/img/property-author-image-2-2@2x.png);
+}
+
+.x1280px-portfolio-template .star-cizbR9 {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x1280px-portfolio-template .star-oPcPeB {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x1280px-portfolio-template .star-gvQ3xw {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x1280px-portfolio-template .star-dVmYdK {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x1280px-portfolio-template .star-TDaxhA {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x1280px-portfolio-template .star-jDWHXu {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x1280px-portfolio-template .star-FWbQuu {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x1280px-portfolio-template .star-lGfnMO {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x1280px-portfolio-template .star-MaHxOc {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x1280px-portfolio-template .star-qcDByt {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x1280px-portfolio-template .this-is-a-template-f-teeBkN {
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  text-align: left;
+  width: 263px;
+}
+
+.x1280px-portfolio-template .author-images-QeozJx {
+  background-image: url(https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67113be9cffb64ecc21eb45e/img/property-author-image-3-2@2x.png);
+}
+
+.x1280px-portfolio-template .star-kPwdeL {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x1280px-portfolio-template .star-zavPZw {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x1280px-portfolio-template .star-oyb6nZ {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x1280px-portfolio-template .star-EE48Ot {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x1280px-portfolio-template .star-CvaQcy {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x1280px-portfolio-template .star-ufZLGY {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x1280px-portfolio-template .star-iYCWb7 {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x1280px-portfolio-template .star-8kEKOL {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x1280px-portfolio-template .star-ngj32E {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x1280px-portfolio-template .star-gql8yY {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x1280px-portfolio-template .footer-525ISW {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0px 100px 70px;
+  position: relative;
+  width: 100%;
+}
+
+.x1280px-portfolio-template .footer-info-to8D40 {
+  align-items: center;
+  border-bottom-style: none;
+  border-color: var(--black-3);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 2px;
+  flex-direction: column;
+  gap: 70px;
+  padding: 70px 0px 0px;
+}
+
+.x1280px-portfolio-template .footer-info-q5NGs8 {
+  align-items: flex-start;
+  gap: 190px;
+}
+
+.x1280px-portfolio-template .contact-info-inqxF4 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+}
+
+.x1280px-portfolio-template .footer-message-xlDmyM {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+}
+
+.x1280px-portfolio-template .lets-work-together-NOT9ej {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 42px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: 360px;
+}
+
+.x1280px-portfolio-template .leave-your-message-v-NOT9ej {
+  background-color: transparent;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  position: relative;
+  text-align: left;
+  width: 360px;
+}
+
+.x1280px-portfolio-template .social-icons-xlDmyM {
+  background-color: transparent;
+  height: 36px;
+  position: relative;
+  width: 232px;
+}
+
+.x1280px-portfolio-template .nstagram-xQBFCV {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% + 31px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x1280px-portfolio-template .behance-xQBFCV {
+  height: 36px;
+  left: calc(50.00% + 80px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x1280px-portfolio-template .dribbble-xQBFCV {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% - 18px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x1280px-portfolio-template .facebook-xQBFCV {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% - 67px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x1280px-portfolio-template .discord-xQBFCV {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% - 116px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x1280px-portfolio-template .text-fields-inqxF4 {
+  gap: 40px;
+}
+
+.x1280px-portfolio-template .text-fields-sAISsO {
+  gap: 20px;
+}
+
+.x1280px-portfolio-template .write-something-bKxfWU {
+  background-color: transparent;
+  border: 0;
+  color: var(--black);
+  flex: 1;
+  flex-grow: 1;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: -1.00px;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: left;
+}
+
+.x1280px-portfolio-template .write-something-bKxfWU::placeholder {
+  color: #2d2d2d99;
+}
+
+.x1280px-portfolio-template .write-something-zNswIb {
+  background-color: transparent;
+  border: 0;
+  color: var(--black);
+  flex: 1;
+  flex-grow: 1;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: -1.00px;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: left;
+}
+
+.x1280px-portfolio-template .write-something-zNswIb::placeholder {
+  color: #2d2d2d99;
+}
+
+.x1280px-portfolio-template .write-something-ZRfsuR {
+  background-color: transparent;
+  border: 0;
+  color: var(--black);
+  flex: 1;
+  flex-grow: 1;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: -1.00px;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: left;
+}
+
+.x1280px-portfolio-template .write-something-ZRfsuR::placeholder {
+  color: #2d2d2d99;
+}
+
+.x1280px-portfolio-template .button-sAISsO {
+  align-items: flex-start;
+  background-color: var(--black);
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 25px 82px;
+  position: relative;
+}
+
+.x1280px-portfolio-template .submit-EAK0pP {
+  background-color: transparent;
+  color: var(--white);
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.x1280px-portfolio-template .behance {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.x1280px-portfolio-template .client-card-mobile {
+  align-items: flex-start;
+  background-color: var(--quarter-pearl-lusta);
+  border: 1.5px solid;
+  border-color: var(--grandis);
+  display: flex;
+  gap: 10px;
+  padding: 30px 50px 30px 30px;
+  position: relative;
+  width: 315px;
+}
+
+.x1280px-portfolio-template .footer-info {
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.x1280px-portfolio-template .header {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.x1280px-portfolio-template .text-fields {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+}
+
+.x1280px-portfolio-template .text-input-desktop {
+  align-items: flex-start;
+  background-color: var(--wild-sand);
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 21px 30px;
+  position: relative;
+  width: 530px;
+}
+/* screen - 375px-portfolio-template */
+
+.x375px-portfolio-template {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex-direction: column;
+  left: 0px;
+  overflow-x: hidden;
+  position: relative;
+  top: 0px;
+}
+
+.x375px-portfolio-template .navigation-txjenx {
+  align-self: stretch;
+  background-color: var(--white);
+  height: 80px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.x375px-portfolio-template .logo-GT7UKq {
+  height: 30px;
+  left: 50px;
+  top: calc(50.00% - 15px);
+  width: 49px;
+}
+
+.x375px-portfolio-template .logo-AC7xlk {
+  height: 100%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 263.27%;
+}
+
+.x375px-portfolio-template .menu-GT7UKq {
+  background-color: transparent;
+  cursor: pointer;
+  height: 23px;
+  position: absolute;
+  right: 50px;
+  top: calc(50.00% - 12px);
+  width: 25px;
+}
+
+.x375px-portfolio-template .ellipse-MGv0PF {
+  left: 68.00%;
+  top: 0px;
+}
+
+.x375px-portfolio-template .ellipse-pff4K2 {
+  left: 68.00%;
+  top: 65.22%;
+}
+
+.x375px-portfolio-template .ellipse-jDXWAE {
+  left: 0px;
+  top: 0px;
+}
+
+.x375px-portfolio-template .ellipse-xL5Gpv {
+  left: 0px;
+  top: 65.22%;
+}
+
+.x375px-portfolio-template .header-txjenx {
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 50px 30px 60px;
+  width: 100%;
+}
+
+.x375px-portfolio-template .header-hBCak6 {
+  background-color: transparent;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.x375px-portfolio-template .headline-subhead-gN8AXz {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 20px;
+}
+
+.x375px-portfolio-template .headline-subhead-r3cTiY {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 24px;
+}
+
+.x375px-portfolio-template .ix-d-ux-researcher-SCElgs {
+  background-color: transparent;
+  color: var(--meteorite);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: 315px;
+}
+
+.x375px-portfolio-template .visual-designer-SCElgs {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-futura-bold-regular);
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  width: 315px;
+}
+
+.x375px-portfolio-template .this-is-a-template-f-r3cTiY {
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  width: 315px;
+}
+
+.x375px-portfolio-template .image-gN8AXz {
+  align-self: stretch;
+  height: 269.81817626953125px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.x375px-portfolio-template .logos-section-txjenx {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0px 66px;
+  position: relative;
+  width: 100%;
+}
+
+.x375px-portfolio-template .logos-YcpaPk {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--black-3);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 2px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 60px;
+  justify-content: center;
+  padding: 60px 0px;
+  position: relative;
+}
+
+.x375px-portfolio-template .stripe-1-antyqs {
+  background-color: transparent;
+  height: 34px;
+  position: relative;
+  width: 221.97247314453125px;
+}
+
+.x375px-portfolio-template .behance-JYMVYG {
+  height: 100%;
+  left: 75.81%;
+  top: 0px;
+  width: 24.19%;
+}
+
+.x375px-portfolio-template .google-JYMVYG {
+  background-color: transparent;
+  height: 34px;
+  left: calc(50.00% - 111px);
+  position: absolute;
+  top: calc(50.00% - 17px);
+  width: 103px;
+}
+
+.x375px-portfolio-template .pinterest-antyqs {
+  background-color: transparent;
+  cursor: pointer;
+  height: 90px;
+  position: relative;
+  width: 90px;
+}
+
+.x375px-portfolio-template .stripe-2-antyqs {
+  background-color: transparent;
+  cursor: pointer;
+  height: 56px;
+  position: relative;
+  width: 108.9501953125px;
+}
+
+.x375px-portfolio-template .a4whc0m0-1-ETci25 {
+  background-color: transparent;
+  height: 56px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 109px;
+}
+
+.x375px-portfolio-template .skills-section-txjenx {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  gap: 10px;
+  height: 1506px;
+  justify-content: center;
+  padding: 150px 62px;
+  position: relative;
+  width: 100%;
+}
+
+.x375px-portfolio-template .frame-1-objZni {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: -751.00px;
+  position: relative;
+  width: 249.89915466308594px;
+}
+
+.x375px-portfolio-template .skills-f3lhKH {
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.x375px-portfolio-template .skill-Xw4EpI {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 56px;
+  position: relative;
+}
+
+.x375px-portfolio-template .skills-M3U6Fa {
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  justify-content: center;
+}
+
+.x375px-portfolio-template .skill-Th7AgR {
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.x375px-portfolio-template .skill-Th7AgR:hover {
+  transform: translate(0, -5px);
+}
+
+.x375px-portfolio-template .books-d5lxsV {
+  background-color: transparent;
+  height: 90px;
+  position: relative;
+  width: 90px;
+}
+
+.x375px-portfolio-template .skill-d5lxsV {
+  background-color: transparent;
+  height: 328px;
+  position: relative;
+  width: 249.89915466308594px;
+}
+
+.x375px-portfolio-template .headline-subhead-XRGiND {
+  display: inline-flex;
+  gap: 19px;
+  left: 0px;
+  top: 186px;
+}
+
+.x375px-portfolio-template .this-is-a-template-f-anGI6T {
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  width: 249.89915466308594px;
+}
+
+.x375px-portfolio-template .skill-mu3BPq {
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.x375px-portfolio-template .skill-mu3BPq:hover {
+  transform: translate(0, -5px);
+}
+
+.x375px-portfolio-template .paintbrush-27Z9O8 {
+  background-color: transparent;
+  height: 90px;
+  position: relative;
+  width: 90px;
+}
+
+.x375px-portfolio-template .skill-27Z9O8 {
+  background-color: transparent;
+  height: 328px;
+  position: relative;
+  width: 249.89915466308594px;
+}
+
+.x375px-portfolio-template .headline-subhead-RAgCgW {
+  display: inline-flex;
+  gap: 19px;
+  left: 0px;
+  top: 186px;
+}
+
+.x375px-portfolio-template .this-is-a-template-f-je7asM {
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  width: 249.89915466308594px;
+}
+
+.x375px-portfolio-template .skill-qlmpeI {
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.x375px-portfolio-template .skill-qlmpeI:hover {
+  transform: translate(0, -5px);
+}
+
+.x375px-portfolio-template .design-xGCChM {
+  background-color: transparent;
+  height: 90px;
+  position: relative;
+  width: 90px;
+}
+
+.x375px-portfolio-template .skill-xGCChM {
+  background-color: transparent;
+  height: 328px;
+  position: relative;
+  width: 249.89915466308594px;
+}
+
+.x375px-portfolio-template .headline-subhead-Y80i3W {
+  display: inline-flex;
+  gap: 19px;
+  left: 0px;
+  top: 186px;
+}
+
+.x375px-portfolio-template .this-is-a-template-f-x84qRV {
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  width: 249.89915466308594px;
+}
+
+.x375px-portfolio-template .skill-F7fAMG {
+  background-color: transparent;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.x375px-portfolio-template .latest-work-section-txjenx {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 60px;
+  padding: 40px 30px;
+  position: relative;
+  width: 100%;
+}
+
+.x375px-portfolio-template .latest-work-MZxsgg {
+  background-color: transparent;
+  color: var(--meteorite);
+  font-family: var(--font-family-futura-bold-regular);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+  line-height: 42px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.x375px-portfolio-template .image-SCwgnb {
+  height: 315px;
+  object-fit: cover;
+  width: 315px;
+}
+
+.x375px-portfolio-template .headline-subhead-SCwgnb {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  width: 315px;
+}
+
+.x375px-portfolio-template .image-RXKhlI {
+  height: 315px;
+  object-fit: cover;
+  width: 315px;
+}
+
+.x375px-portfolio-template .headline-subhead-RXKhlI {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  width: 315px;
+}
+
+.x375px-portfolio-template .image-Y4VRp4 {
+  height: 315px;
+  width: 315px;
+}
+
+.x375px-portfolio-template .headline-subhead-Y4VRp4 {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  width: 315px;
+}
+
+.x375px-portfolio-template .image-mSmfVR {
+  height: 315px;
+  object-fit: cover;
+  width: 315px;
+}
+
+.x375px-portfolio-template .headline-subhead-mSmfVR {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  width: 315px;
+}
+
+.x375px-portfolio-template .image-ayLtER {
+  height: 315px;
+  object-fit: cover;
+  width: 315px;
+}
+
+.x375px-portfolio-template .headline-subhead-ayLtER {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  width: 315px;
+}
+
+.x375px-portfolio-template .image-vaTLPx {
+  height: 315px;
+  object-fit: cover;
+  width: 315px;
+}
+
+.x375px-portfolio-template .headline-subhead-vaTLPx {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  width: 315px;
+}
+
+.x375px-portfolio-template .clients-section-txjenx {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  padding: 60px 30px 90px;
+  position: relative;
+  width: 100%;
+}
+
+.x375px-portfolio-template .client-cards-THSVly {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+}
+
+.x375px-portfolio-template .clients-cN7zr7 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 42px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.x375px-portfolio-template .clients-cards-cN7zr7 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+}
+
+.x375px-portfolio-template .this-is-a-template-f-4eA65D {
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  text-align: left;
+  width: 263px;
+}
+
+.x375px-portfolio-template .author-images-yGFQNY {
+  background-image: url(https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67113be9cffb64ecc21eb45e/img/property-author-image-1-2@2x.png);
+}
+
+.x375px-portfolio-template .star-dw0v9E {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x375px-portfolio-template .star-qLbzRI {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x375px-portfolio-template .star-8vHxZo {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x375px-portfolio-template .star-CCRYsZ {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x375px-portfolio-template .star-el6Pio {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x375px-portfolio-template .star-DxRFVy {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x375px-portfolio-template .star-qs9LXm {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x375px-portfolio-template .star-XrNxCx {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x375px-portfolio-template .star-UMQms6 {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x375px-portfolio-template .star-jWhWdf {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x375px-portfolio-template .this-is-a-template-f-0ZRmxe {
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  text-align: left;
+  width: 263px;
+}
+
+.x375px-portfolio-template .author-images-xqzenn {
+  background-image: url(https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67113be9cffb64ecc21eb45e/img/property-author-image-2-2@2x.png);
+}
+
+.x375px-portfolio-template .star-WXoII1 {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x375px-portfolio-template .star-buqvuN {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x375px-portfolio-template .star-9ctSxj {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x375px-portfolio-template .star-CaLpQ7 {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x375px-portfolio-template .star-M0I9Ru {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x375px-portfolio-template .star-RX4hHJ {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x375px-portfolio-template .star-G6u8sM {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x375px-portfolio-template .star-xBdhXy {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x375px-portfolio-template .star-rxPO7j {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x375px-portfolio-template .star-j3lwNM {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x375px-portfolio-template .this-is-a-template-f-Hsu4bA {
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  text-align: left;
+  width: 263px;
+}
+
+.x375px-portfolio-template .author-images-xt4jVL {
+  background-image: url(https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67113be9cffb64ecc21eb45e/img/property-author-image-3-2@2x.png);
+}
+
+.x375px-portfolio-template .star-pEpcs6 {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x375px-portfolio-template .star-H8Z2SU {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x375px-portfolio-template .star-vimdMm {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x375px-portfolio-template .star-FUlqIb {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x375px-portfolio-template .star-4V7opt {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x375px-portfolio-template .star-gqhqly {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x375px-portfolio-template .star-rB4pQk {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x375px-portfolio-template .star-VcL7LG {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x375px-portfolio-template .star-QZAFRg {
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.x375px-portfolio-template .star-1KLFXA {
+  background-color: transparent;
+  height: 80.02%;
+  left: 8.19%;
+  position: absolute;
+  top: 6.30%;
+  width: 83.62%;
+}
+
+.x375px-portfolio-template .footer-txjenx {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0px 30px 70px;
+  position: relative;
+  width: 100%;
+}
+
+.x375px-portfolio-template .footer-info-3ljSGy {
+  align-items: center;
+  border-bottom-style: none;
+  border-color: var(--black-3);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 2px;
+  display: inline-flex;
+  gap: 70px;
+  padding: 70px 0px 0px;
+}
+
+.x375px-portfolio-template .footer-info-QtxNyx {
+  align-items: flex-start;
+  display: flex;
+  gap: 80px;
+  width: 315px;
+}
+
+.x375px-portfolio-template .contact-info-AFJ7kf {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+  width: 315px;
+}
+
+.x375px-portfolio-template .footer-message-pM3ccA {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  width: 315px;
+}
+
+.x375px-portfolio-template .lets-work-together-Ij23zE {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 42px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: 315px;
+}
+
+.x375px-portfolio-template .leave-your-message-v-Ij23zE {
+  background-color: transparent;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  position: relative;
+  text-align: left;
+  width: 315px;
+}
+
+.x375px-portfolio-template .social-icons-pM3ccA {
+  background-color: transparent;
+  height: 36px;
+  position: relative;
+  width: 232px;
+}
+
+.x375px-portfolio-template .nstagram-txWBSi {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% + 31px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x375px-portfolio-template .behance-txWBSi {
+  height: 36px;
+  left: calc(50.00% + 80px);
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x375px-portfolio-template .dribbble-txWBSi {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% - 18px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x375px-portfolio-template .facebook-txWBSi {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% - 67px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x375px-portfolio-template .discord-txWBSi {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% - 116px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x375px-portfolio-template .text-fields-AFJ7kf {
+  display: inline-flex;
+  gap: 40px;
+}
+
+.x375px-portfolio-template .text-fields-Vao21T {
+  display: flex;
+  gap: 20px;
+  width: 315px;
+}
+
+.x375px-portfolio-template .write-something-xUG0Mp {
+  background-color: transparent;
+  border: 0;
+  color: var(--black);
+  flex: 1;
+  flex-grow: 1;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: -1.00px;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: left;
+}
+
+.x375px-portfolio-template .write-something-xUG0Mp::placeholder {
+  color: #2d2d2d99;
+}
+
+.x375px-portfolio-template .write-something-Zq1tUn {
+  background-color: transparent;
+  border: 0;
+  color: var(--black);
+  flex: 1;
+  flex-grow: 1;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: -1.00px;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: left;
+}
+
+.x375px-portfolio-template .write-something-Zq1tUn::placeholder {
+  color: #2d2d2d99;
+}
+
+.x375px-portfolio-template .write-something-gxp0vv {
+  background-color: transparent;
+  border: 0;
+  color: var(--black);
+  flex: 1;
+  flex-grow: 1;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: -1.00px;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: left;
+}
+
+.x375px-portfolio-template .write-something-gxp0vv::placeholder {
+  color: #2d2d2d99;
+}
+
+.x375px-portfolio-template .button-Vao21T {
+  align-items: flex-start;
+  background-color: var(--black);
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 25px 82px;
+  position: relative;
+}
+
+.x375px-portfolio-template .submit-WKKOUO {
+  background-color: transparent;
+  color: var(--white);
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.x375px-portfolio-template .behance {
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+}
+
+.x375px-portfolio-template .client-card-mobile {
+  align-items: flex-start;
+  background-color: var(--quarter-pearl-lusta);
+  border: 1.5px solid;
+  border-color: var(--grandis);
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 30px 50px 30px 30px;
+  position: relative;
+  width: 315px;
+}
+
+.x375px-portfolio-template .footer-info {
+  background-color: transparent;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+}
+
+.x375px-portfolio-template .header {
+  align-items: center;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.x375px-portfolio-template .image {
+  background-color: transparent;
+  position: relative;
+}
+
+.x375px-portfolio-template .skills {
+  align-items: flex-start;
+  background-color: transparent;
+  flex-direction: column;
+  gap: 125px;
+  position: relative;
+}
+
+.x375px-portfolio-template .text-fields {
+  align-items: flex-start;
+  background-color: transparent;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+}
+
+.x375px-portfolio-template .text-input-desktop {
+  align-items: flex-start;
+  background-color: var(--wild-sand);
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 21px 30px;
+  position: relative;
+  width: 315px;
+}
+
+.x375px-portfolio-template .work-card {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 25px;
+  position: relative;
+}
+@media screen and (max-width: 1279px) {
+  .screen.x1280px-portfolio-template { 
+    display: none;
+   }
+}
+@media screen and (min-width: 1280px) {
+  .screen.x375px-portfolio-template { 
+    display: none;
+   }
+}</style></head><body style="margin: 0;"><input type="hidden" id="anPageName" name="page" value="1280px-portfolio-template"><form class="x375px-portfolio-template screen " data-id="176:2337" name="form1" action="form1" method="post"><input type="text" name="trapit" value="" style="display:none;"><div class="navigation-txjenx" data-id="176:2338"><div class="logo-GT7UKq logo" data-id="I176:2338;55:1461"><div class="logo-AC7xlk valign-text-middle logo futura-bold-regular-normal-thunder-20px" data-id="I176:2338;55:1461;33:554">Areeb Sadiq</div></div><a href="375px-about-page"><div class="menu-GT7UKq" data-id="I176:2338;55:1473"><div class="ellipse-MGv0PF ellipse" data-id="I176:2338;55:1473;55:1467"></div><div class="ellipse-pff4K2 ellipse" data-id="I176:2338;55:1473;55:1469"></div><div class="ellipse-jDXWAE ellipse" data-id="I176:2338;55:1473;55:1468"></div><div class="ellipse-xL5Gpv ellipse" data-id="I176:2338;55:1473;55:1470"></div></div></a></div><div class="header-txjenx header" data-id="176:2339"><div class="header-hBCak6 header" data-id="I176:2339;51:954"><div class="headline-subhead-gN8AXz headline-subhead" data-id="I176:2339;51:953"><div class="headline-subhead-r3cTiY headline-subhead" data-id="I176:2339;51:952"><div class="ix-d-ux-researcher-SCElgs valign-text-middle subtitle" data-id="I176:2339;53:917">IxD | UX researcher</div><h1 class="visual-designer-SCElgs valign-text-middle" data-id="I176:2339;53:918">Areeb <br>Sadiq</h1></div><p class="this-is-a-template-f-r3cTiY this-is-a-template-f body-text" data-id="I176:2339;53:919">Trying to better myself by helping others</p></div><div class="image-gN8AXz image" data-id="I176:2339;51:949"><video width="100%" height="100%" src="" anima-src="https://cdn.animaapp.com/projects/6318a37fa6fbd0d14fab59df/files/header-video.mp4" loop autoplay="autoplay" playsinline muted></video></div></div></div><div class="logos-section-txjenx" data-id="176:2340"><div class="logos-YcpaPk" data-id="I176:2340;176:2086"><div class="stripe-1-antyqs" data-id="I176:2340;176:2076"><a href="https://www.behance.net/faz3r" target="_blank"><img class="behance-JYMVYG behance" data-id="I176:2340;176:2077" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67114a05fc1f426fce2fe492/img/behance-1@2x.png" alt="Behance"></a><img class="google-JYMVYG" data-id="I176:2340;176:2078" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67114a05fc1f426fce2fe492/img/google@2x.png" alt="Google"></div><a href="https://in.pinterest.com/watchglowgaze/" target="_blank"><img class="pinterest-antyqs" data-id="I176:2340;604:667" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/pinterest@2x.png" alt="Pinterest"></a><a href="https://www.linkedin.com/in/areeb-sadiq-4b4016287/" target="_blank"><div class="stripe-2-antyqs" data-id="I176:2340;176:2073"><img class="a4whc0m0-1-ETci25" data-id="I176:2340;603:1263" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/a4whc0m0-1.png" alt="a4whc0m0 1"></div></a></div></div><div class="skills-section-txjenx" data-id="176:2341"><div class="frame-1-objZni" data-id="I176:2341;604:2029"><div class="skills-f3lhKH skills" data-id="I176:2341;51:1463"><div class="skill-Xw4EpI" data-id="I176:2341;51:1464"><a href="https://www.behance.net/faz3r" target="_blank"><div class="skills-M3U6Fa skills" data-id="I176:2341;604:1054"><div class="skill-Th7AgR smart-layers-pointers" data-id="I176:2341;604:1055"><img class="books-d5lxsV" data-id="I176:2341;604:1056" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711636980459ef98b40d9bd/img/books@2x.png" alt="Books"><div class="skill-d5lxsV" data-id="I176:2341;604:1057"><div class="headline-subhead-XRGiND headline-subhead" data-id="I176:2341;604:1057;176:1168"><h3 class="main-title h3" data-id="I176:2341;604:1057;176:1169">User Research</h3><p class="this-is-a-template-f-anGI6T this-is-a-template-f body-text" data-id="I176:2341;604:1057;176:1170">Empathizing with users through thorough rounds of interviews and 1 on 1 sessions</p></div></div></div><div class="skill-mu3BPq smart-layers-pointers" data-id="I176:2341;604:1058"><img class="paintbrush-27Z9O8" data-id="I176:2341;604:1059" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711636980459ef98b40d9bd/img/paintbrush@2x.png" alt="Paintbrush"><div class="skill-27Z9O8" data-id="I176:2341;604:1060"><div class="headline-subhead-RAgCgW headline-subhead" data-id="I176:2341;604:1060;176:1168"><h3 class="main-title h3" data-id="I176:2341;604:1060;176:1169">Graphic Creation</h3><p class="this-is-a-template-f-je7asM this-is-a-template-f body-text" data-id="I176:2341;604:1060;176:1170">Eye catching graphics and illustrations</p></div></div></div><div class="skill-qlmpeI smart-layers-pointers" data-id="I176:2341;604:1061"><img class="design-xGCChM" data-id="I176:2341;604:1062" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711636980459ef98b40d9bd/img/design@2x.png" alt="Design"><div class="skill-xGCChM" data-id="I176:2341;604:1063"><div class="headline-subhead-Y80i3W headline-subhead" data-id="I176:2341;604:1063;176:1168"><h3 class="main-title h3" data-id="I176:2341;604:1063;176:1169">Iterative design</h3><p class="this-is-a-template-f-x84qRV this-is-a-template-f body-text" data-id="I176:2341;604:1063;176:1170">design that changes with Your preferance</p></div></div></div></div></a></div><div class="skill-F7fAMG" data-id="I176:2341;51:1474"></div></div></div></div><div class="latest-work-section-txjenx" data-id="176:2342"><div class="latest-work-MZxsgg" data-id="I176:2342;51:1569">Latest work</div><div class="work-card" data-id="I176:2342;604:1494"><img class="image-SCwgnb image" data-id="I176:2342;604:1494;51:1496" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711597bcffb64ecc21eb4fb/img/image-9.png" alt="Image"><div class="headline-subhead-SCwgnb headline-subhead" data-id="I176:2342;604:1494;51:1497"><div class="project-title futura-bold-regular-normal-thunder-20px" data-id="I176:2342;604:1494;51:1498">Service Design</div><p class="ui-art-drection body-text" data-id="I176:2342;604:1494;51:1499">ComeUnity- A community engagement platform</p></div></div><div class="work-card" data-id="I176:2342;604:1569"><img class="image-RXKhlI image" data-id="I176:2342;604:1569;51:1496" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711636980459ef98b40d9bd/img/image-3@2x.png" alt="Image"><div class="headline-subhead-RXKhlI headline-subhead" data-id="I176:2342;604:1569;51:1497"><div class="project-title futura-bold-regular-normal-thunder-20px" data-id="I176:2342;604:1569;51:1498">Website design</div><div class="ui-art-drection body-text" data-id="I176:2342;604:1569;51:1499">Monicure</div></div></div><div class="work-card" data-id="I176:2342;604:1743"><img class="image-Y4VRp4 image" data-id="I176:2342;604:1743;51:1496" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711636980459ef98b40d9bd/img/image-4@2x.png" alt="Image"><div class="headline-subhead-Y4VRp4 headline-subhead" data-id="I176:2342;604:1743;51:1497"><div class="project-title futura-bold-regular-normal-thunder-20px" data-id="I176:2342;604:1743;51:1498">Brand Design</div><p class="ui-art-drection body-text" data-id="I176:2342;604:1743;51:1499">ALemonTree- curating the best from around the globe</p></div></div><div class="work-card" data-id="I176:2342;604:1712"><img class="image-mSmfVR image" data-id="I176:2342;604:1712;51:1496" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711597bcffb64ecc21eb4fb/img/image-11.png" alt="Image"><div class="headline-subhead-mSmfVR headline-subhead" data-id="I176:2342;604:1712;51:1497"><div class="project-title futura-bold-regular-normal-thunder-20px" data-id="I176:2342;604:1712;51:1498">Graphic Design</div><p class="ui-art-drection body-text" data-id="I176:2342;604:1712;51:1499">From childrens novels to Design posters</p></div></div><div class="work-card" data-id="I176:2342;604:1686"><img class="image-ayLtER image" data-id="I176:2342;604:1686;51:1496" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711597bcffb64ecc21eb4fb/img/image-10.png" alt="Image"><div class="headline-subhead-ayLtER headline-subhead" data-id="I176:2342;604:1686;51:1497"><div class="project-title futura-bold-regular-normal-thunder-20px" data-id="I176:2342;604:1686;51:1498">User Research</div><div class="ui-art-drection body-text" data-id="I176:2342;604:1686;51:1499">Understanding users needs</div></div></div><div class="work-card" data-id="I176:2342;604:1665"><img class="image-vaTLPx image" data-id="I176:2342;604:1665;51:1496" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711597bcffb64ecc21eb4fb/img/image-8.png" alt="Image"><div class="headline-subhead-vaTLPx headline-subhead" data-id="I176:2342;604:1665;51:1497"><div class="project-title futura-bold-regular-normal-thunder-20px" data-id="I176:2342;604:1665;51:1498">App Design</div><div class="ui-art-drection body-text" data-id="I176:2342;604:1665;51:1499">Sahayak - Revamping transport</div></div></div></div><div class="clients-section-txjenx" data-id="176:2343"><div class="client-cards-THSVly" data-id="I176:2343;51:1852"><div class="clients-cN7zr7 epilogue-semi-bold-thunder-32px" data-id="I176:2343;51:1613">Clients</div><div class="clients-cards-cN7zr7" data-id="I176:2343;51:1841"><article class="client-card-mobile" data-id="I176:2343;51:1769"><div class="client-card" data-id="I176:2343;51:1769;51:1731"><p class="this-is-a-template-f-4eA65D this-is-a-template-f subtitle" data-id="I176:2343;51:1769;51:1732">Really appreciated the work from Areeb great stuff</p><div class="client-info" data-id="I176:2343;51:1769;51:1733"><div class="author-images-yGFQNY author-images" data-id="I176:2343;51:1769;176:3100-c2e990a3-ff3f-413c-b683-d7c052eb3766"></div><div class="rate" data-id="I176:2343;51:1769;51:1735"><div class="rate-stars" data-id="I176:2343;51:1769;170:3387"><article class="star-dw0v9E" data-id="I176:2343;51:1769;170:3387;170:3373"><img class="star-qLbzRI" data-id="I176:2343;51:1769;170:3387;170:3373;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/star@2x.png" alt="Star"></article><article class="star-8vHxZo" data-id="I176:2343;51:1769;170:3387;170:3375"><img class="star-CCRYsZ" data-id="I176:2343;51:1769;170:3387;170:3375;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/star@2x.png" alt="Star"></article><article class="star-el6Pio" data-id="I176:2343;51:1769;170:3387;170:3377"><img class="star-DxRFVy" data-id="I176:2343;51:1769;170:3387;170:3377;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/star@2x.png" alt="Star"></article><article class="star-qs9LXm" data-id="I176:2343;51:1769;170:3387;170:3379"><img class="star-XrNxCx" data-id="I176:2343;51:1769;170:3387;170:3379;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/star@2x.png" alt="Star"></article><article class="star-UMQms6" data-id="I176:2343;51:1769;170:3387;170:3381"><img class="star-jWhWdf" data-id="I176:2343;51:1769;170:3387;170:3381;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/star@2x.png" alt="Star"></article></div><div class="gemma-nolen-google body-text" data-id="I176:2343;51:1769;51:1737">Gemma Nolen, <br>Google</div></div></div></div></article><article class="client-card-mobile" data-id="I176:2343;51:1793"><div class="client-card" data-id="I176:2343;51:1793;51:1731"><p class="this-is-a-template-f-0ZRmxe this-is-a-template-f subtitle" data-id="I176:2343;51:1793;51:1732">Really appreciated the work from Areeb great stuff</p><div class="client-info" data-id="I176:2343;51:1793;51:1733"><div class="author-images-xqzenn author-images" data-id="I176:2343;51:1793;176:3100-d72a09aa-69c0-432c-8f43-de073821105e"></div><div class="rate" data-id="I176:2343;51:1793;51:1735"><div class="rate-stars" data-id="I176:2343;51:1793;170:3387"><article class="star-WXoII1" data-id="I176:2343;51:1793;170:3387;170:3373"><img class="star-buqvuN" data-id="I176:2343;51:1793;170:3387;170:3373;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/star@2x.png" alt="Star"></article><article class="star-9ctSxj" data-id="I176:2343;51:1793;170:3387;170:3375"><img class="star-CaLpQ7" data-id="I176:2343;51:1793;170:3387;170:3375;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/star@2x.png" alt="Star"></article><article class="star-M0I9Ru" data-id="I176:2343;51:1793;170:3387;170:3377"><img class="star-RX4hHJ" data-id="I176:2343;51:1793;170:3387;170:3377;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/star@2x.png" alt="Star"></article><article class="star-G6u8sM" data-id="I176:2343;51:1793;170:3387;170:3379"><img class="star-xBdhXy" data-id="I176:2343;51:1793;170:3387;170:3379;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/star@2x.png" alt="Star"></article><article class="star-rxPO7j" data-id="I176:2343;51:1793;170:3387;170:3381"><img class="star-j3lwNM" data-id="I176:2343;51:1793;170:3387;170:3381;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/star@2x.png" alt="Star"></article></div><div class="gemma-nolen-google body-text" data-id="I176:2343;51:1793;51:1737">Gemma Nolen, <br>Google</div></div></div></div></article><article class="client-card-mobile" data-id="I176:2343;51:1817"><div class="client-card" data-id="I176:2343;51:1817;51:1731"><p class="this-is-a-template-f-Hsu4bA this-is-a-template-f subtitle" data-id="I176:2343;51:1817;51:1732">Really appreciated the work from Areeb great stuff</p><div class="client-info" data-id="I176:2343;51:1817;51:1733"><div class="author-images-xt4jVL author-images" data-id="I176:2343;51:1817;176:3100-04dbe11b-afe5-4e72-acc9-5067bac5dc60"></div><div class="rate" data-id="I176:2343;51:1817;51:1735"><div class="rate-stars" data-id="I176:2343;51:1817;170:3387"><article class="star-pEpcs6" data-id="I176:2343;51:1817;170:3387;170:3373"><img class="star-H8Z2SU" data-id="I176:2343;51:1817;170:3387;170:3373;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/star@2x.png" alt="Star"></article><article class="star-vimdMm" data-id="I176:2343;51:1817;170:3387;170:3375"><img class="star-FUlqIb" data-id="I176:2343;51:1817;170:3387;170:3375;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/star@2x.png" alt="Star"></article><article class="star-4V7opt" data-id="I176:2343;51:1817;170:3387;170:3377"><img class="star-gqhqly" data-id="I176:2343;51:1817;170:3387;170:3377;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/star@2x.png" alt="Star"></article><article class="star-rB4pQk" data-id="I176:2343;51:1817;170:3387;170:3379"><img class="star-VcL7LG" data-id="I176:2343;51:1817;170:3387;170:3379;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/star@2x.png" alt="Star"></article><article class="star-QZAFRg" data-id="I176:2343;51:1817;170:3387;170:3381"><img class="star-1KLFXA" data-id="I176:2343;51:1817;170:3387;170:3381;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/star@2x.png" alt="Star"></article></div><div class="gemma-nolen-google body-text" data-id="I176:2343;51:1817;51:1737">Gemma Nolen, <br>Google</div></div></div></div></article></div></div></div><footer class="footer-txjenx" data-id="176:2344"><div class="footer-info-3ljSGy footer-info" data-id="I176:2344;176:1054"><div class="footer-info-QtxNyx footer-info" data-id="I176:2344;176:1055"><div class="contact-info-AFJ7kf" data-id="I176:2344;176:1056"><div class="footer-message-pM3ccA" data-id="I176:2344;176:1057"><div class="lets-work-together-Ij23zE epilogue-semi-bold-thunder-32px" data-id="I176:2344;176:1058">Let’s work together</div><p class="leave-your-message-v-Ij23zE body-text" data-id="I176:2344;176:1059">Leave your message via email or contact me via the links below!!</p></div><div class="social-icons-pM3ccA" data-id="I176:2344;176:1060"><a href="https://www.instagram.com/animaapp/?hl=en" target="_blank"><img class="nstagram-txWBSi" data-id="I176:2344;176:1061" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/nstagram-1@2x.png" alt="nstagram"></a><a href="https://www.behance.net/Anima_design" target="_blank"><img class="behance-txWBSi behance" data-id="I176:2344;176:1063" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/behance-2@2x.png" alt="behance"></a><a href="https://dribbble.com/animaapp" target="_blank"><img class="dribbble-txWBSi" data-id="I176:2344;176:1065" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/dribbble-1@2x.png" alt="dribbble"></a><a href="https://www.facebook.com/animaapp/" target="_blank"><img class="facebook-txWBSi" data-id="I176:2344;176:1067" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/facebook-1@2x.png" alt="facebook"></a><a href="https://discord.com/invite/eQxkYTNxSp" target="_blank"><img class="discord-txWBSi" data-id="I176:2344;176:1069" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/discord-1@2x.png" alt="discord"></a></div></div><div class="text-fields-AFJ7kf text-fields" data-id="I176:2344;176:1071"><div class="text-fields-Vao21T text-fields" data-id="I176:2344;176:1072"><article class="text-input-desktop" data-id="I176:2344;176:1073"><input class="write-something-xUG0Mp body-text" data-id="I176:2344;176:1073;33:3158" name="writesomething" placeholder="Name" type="text"></article><article class="text-input-desktop" data-id="I176:2344;176:1074"><input class="write-something-Zq1tUn body-text" data-id="I176:2344;176:1074;33:3158" name="writesomething" placeholder="Email" type="email"></article><article class="text-input-desktop" data-id="I176:2344;176:1075"><textarea class="write-something-gxp0vv body-text" data-id="I176:2344;176:1075;33:3158" name="writesomething" placeholder="Type your message here" type="text"></textarea></article></div><div class="button-Vao21T" data-id="I176:2344;176:1076"><a href="javascript:SubmitForm('form1')"><div class="submit-WKKOUO valign-text-middle subtitle" data-id="I176:2344;176:1076;33:3153">Submit</div></a></div></div></div></div></footer></form><form class="x1280px-portfolio-template screen " data-id="176:2329" name="form3" action="form3" method="post"><input type="text" name="trapit" value="" style="display:none;"><div class="navigation-525ISW" data-id="176:2330"><div class="nav-nav-menu-Axx9dk" data-id="I176:2330;33:558"><a href="1280px-about-page"><div class="about-oxIlSV valign-text-middle futuramdbt-medium-meteorite-24px" data-id="I176:2330;33:550">About</div></a><a href="https://www.animaapp.com/?utm_source=figma-samples&utm_campaign=figma-portfolio22&utm_medium=figma-samples" target="_blank"><div class="work-oxIlSV valign-text-middle futuramdbt-medium-meteorite-24px" data-id="I176:2330;33:551">Work</div></a><a href="#footer"><div class="contact-oxIlSV valign-text-middle futuramdbt-medium-meteorite-24px" data-id="I176:2330;33:552">Contact</div></a></div><div class="logo-Axx9dk logo" data-id="I176:2330;33:556"><div class="logo-Yp6xXJ valign-text-middle logo" data-id="I176:2330;33:556;33:554">Areeb Sadiq</div></div></div><div class="header-525ISW header" data-id="176:2331"><div class="header-q27ZC9 header" data-id="I176:2331;33:582"><div class="headline-subhead-Mcz8YJ headline-subhead" data-id="I176:2331;33:581"><div class="headline-subhead-FpeeTE headline-subhead" data-id="I176:2331;33:580"><p class="branding-image-making-jAxxkx valign-text-middle subtitle" data-id="I176:2331;33:564">Interaction Design | UX Researcher</p><h1 class="my-awesome-portfolio-jAxxkx valign-text-middle" data-id="I176:2331;33:565">Areeb Sadiq</h1></div><p class="and-i-made-it-myself-FpeeTE body-text" data-id="I176:2331;33:566">Trying to better myself by helping others</p></div><div class="image-Mcz8YJ" data-id="I176:2331;33:579"><video src="" anima-src="https://cdn.animaapp.com/projects/6318a37fa6fbd0d14fab59df/files/header-video.mp4" loop autoplay="autoplay" playsinline muted></video></div></div></div><div class="logos-section-525ISW" data-id="179:1453"><div class="logos-ji2zIw" data-id="I179:1453;179:1329"><a href="https://www.behance.net/faz3r" target="_blank"><img class="behance-e2heV5 behance" data-id="I179:1453;179:1331" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/behance-4@2x.png" alt="Behance"></a><a href="https://www.linkedin.com/in/areeb-sadiq-4b4016287/" target="_blank"><img class="a4whc0m0-1-e2heV5" data-id="I179:1453;603:1209" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/a4whc0m0-1.png" alt="a4whc0m0 1"></a><img class="google-e2heV5" data-id="I179:1453;179:1332" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/google-1@2x.png" alt="Google"><a href="https://in.pinterest.com/watchglowgaze/" target="_blank"><img class="pinterest-e2heV5" data-id="I179:1453;604:644" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115c2f5816b4753e9993e8/img/pinterest@2x.png" alt="Pinterest"></a></div></div><div class="frame-2-525ISW" data-id="604:2120"><div class="skills-section-49bkE6" data-id="176:2333"><a href="https://www.behance.net/faz3r" target="_blank"><div class="skills-3wnI72" data-id="I176:2333;33:1135"><div class="skill-DWlbtG smart-layers-pointers" data-id="I176:2333;33:1132"><img class="books-Bob90m" data-id="I176:2333;604:943" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711636980459ef98b40d9bd/img/books@2x.png" alt="Books"><div class="skill-Bob90m" data-id="I176:2333;176:1301"><div class="headline-subhead-xdvlxS headline-subhead" data-id="I176:2333;176:1301;176:1168"><h3 class="main-title h3" data-id="I176:2333;176:1301;176:1169">User Research</h3><p class="this-is-a-template-f-5SHy82 this-is-a-template-f body-text" data-id="I176:2333;176:1301;176:1170">Empathizing with users through thorough rounds of interviews and 1 on 1 sessions</p></div></div></div><div class="skill-dxIRt7 smart-layers-pointers" data-id="I176:2333;33:1133"><img class="paintbrush-7B6EfY" data-id="I176:2333;604:951" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711636980459ef98b40d9bd/img/paintbrush@2x.png" alt="Paintbrush"><div class="skill-7B6EfY" data-id="I176:2333;176:1324"><div class="headline-subhead-aBF5ee headline-subhead" data-id="I176:2333;176:1324;176:1168"><h3 class="main-title h3" data-id="I176:2333;176:1324;176:1169">Graphic Creation</h3><p class="this-is-a-template-f-qJusGb this-is-a-template-f body-text" data-id="I176:2333;176:1324;176:1170">Eye catching graphics and illustrations</p></div></div></div><div class="skill-Ce2ag9 smart-layers-pointers" data-id="I176:2333;33:1134"><img class="design-0Yn4LS" data-id="I176:2333;604:952" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711636980459ef98b40d9bd/img/design@2x.png" alt="Design"><div class="skill-0Yn4LS" data-id="I176:2333;176:1347"><div class="headline-subhead-xCGrPX headline-subhead" data-id="I176:2333;176:1347;176:1168"><h3 class="main-title h3" data-id="I176:2333;176:1347;176:1169">Iterative design</h3><p class="this-is-a-template-f-cqvD2v this-is-a-template-f body-text" data-id="I176:2333;176:1347;176:1170">design that changes with Your preferance</p></div></div></div></div></a></div></div><div class="latest-work-section-525ISW" data-id="176:2334"><div class="my-latest-work-wMiMSA" data-id="I176:2334;33:1139">My latest work</div><div class="work-cards-wMiMSA" data-id="I176:2334;33:1303"><div class="stripe-1-YiZ8se" data-id="I176:2334;33:1286"><article class="work-card-QHQqx8 smart-layers-pointers" data-id="I176:2334;170:2631"><img class="image-GeVYMN" data-id="I176:2334;170:2631;51:1496" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711597bcffb64ecc21eb4fb/img/image-8.png" alt="Image"><div class="headline-subhead-GeVYMN headline-subhead" data-id="I176:2334;170:2631;51:1497"><div class="project-title futura-bold-regular-normal-thunder-20px" data-id="I176:2334;170:2631;51:1498">App Design</div><div class="ui-art-drection body-text" data-id="I176:2334;170:2631;51:1499">Sahayak - Revamping transport</div></div></article><article class="work-card-PYmMqz smart-layers-pointers" data-id="I176:2334;170:2671"><img class="image-RQyJ5p" data-id="I176:2334;170:2671;51:1496" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711636980459ef98b40d9bd/img/image-3@2x.png" alt="Image"><div class="headline-subhead-RQyJ5p headline-subhead" data-id="I176:2334;170:2671;51:1497"><div class="project-title futura-bold-regular-normal-thunder-20px" data-id="I176:2334;170:2671;51:1498">Website design</div><div class="ui-art-drection body-text" data-id="I176:2334;170:2671;51:1499">Monicure</div></div></article><article class="work-card-WOFF8T" data-id="I176:2334;604:1543"><img class="image-JEPP3f" data-id="I176:2334;604:1543;51:1496" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711636980459ef98b40d9bd/img/image-3@2x.png" alt="Image"><div class="headline-subhead-JEPP3f headline-subhead" data-id="I176:2334;604:1543;51:1497"><div class="project-title futura-bold-regular-normal-thunder-20px" data-id="I176:2334;604:1543;51:1498">Website design</div><div class="ui-art-drection body-text" data-id="I176:2334;604:1543;51:1499">Monicure</div></div></article><article class="work-card-pdOsRL smart-layers-pointers" data-id="I176:2334;170:2711"><img class="image-7Hcalr" data-id="I176:2334;170:2711;51:1496" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711597bcffb64ecc21eb4fb/img/image-9.png" alt="Image"><div class="headline-subhead-7Hcalr headline-subhead" data-id="I176:2334;170:2711;51:1497"><div class="project-title futura-bold-regular-normal-thunder-20px" data-id="I176:2334;170:2711;51:1498">Service Design</div><p class="ui-art-drection body-text" data-id="I176:2334;170:2711;51:1499">ComeUnity- A community engagement platform</p></div></article></div><div class="stripe-2-YiZ8se" data-id="I176:2334;33:1287"><article class="work-card-4zJZu5 smart-layers-pointers" data-id="I176:2334;170:2751"><img class="image-xo40A9" data-id="I176:2334;170:2751;51:1496" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711597bcffb64ecc21eb4fb/img/image-10.png" alt="Image"><div class="headline-subhead-xo40A9 headline-subhead" data-id="I176:2334;170:2751;51:1497"><div class="project-title futura-bold-regular-normal-thunder-20px" data-id="I176:2334;170:2751;51:1498">User Research</div><div class="ui-art-drection body-text" data-id="I176:2334;170:2751;51:1499">Understanding users needs</div></div></article><article class="work-card-wNs8AZ smart-layers-pointers" data-id="I176:2334;170:2791"><img class="image-xnREng" data-id="I176:2334;170:2791;51:1496" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711597bcffb64ecc21eb4fb/img/image-11.png" alt="Image"><div class="headline-subhead-xnREng headline-subhead" data-id="I176:2334;170:2791;51:1497"><div class="project-title futura-bold-regular-normal-thunder-20px" data-id="I176:2334;170:2791;51:1498">Graphic Design</div><p class="ui-art-drection body-text" data-id="I176:2334;170:2791;51:1499">From childrens novels to Design posters</p></div></article><article class="work-card-EvhR3a smart-layers-pointers" data-id="I176:2334;170:2831"><img class="image-1W6ZOY" data-id="I176:2334;170:2831;51:1496" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/6711636980459ef98b40d9bd/img/image-4@2x.png" alt="Image"><div class="headline-subhead-1W6ZOY headline-subhead" data-id="I176:2334;170:2831;51:1497"><div class="project-title futura-bold-regular-normal-thunder-20px" data-id="I176:2334;170:2831;51:1498">Brand Design</div><p class="ui-art-drection body-text" data-id="I176:2334;170:2831;51:1499">ALemonTree- curating the best from around the globe</p></div></article></div></div></div><div class="clients-section-525ISW" data-id="176:2335"><div class="client-cards-rtQTco" data-id="I176:2335;33:1580"><div class="clients-SSM13z epilogue-semi-bold-thunder-32px" data-id="I176:2335;33:1506">Clients</div><div class="clients-cards-SSM13z" data-id="I176:2335;33:1579"><article class="client-card-mobile" data-id="I176:2335;170:1770"><div class="client-card" data-id="I176:2335;170:1770;51:1731"><p class="this-is-a-template-f-iOZh3Y this-is-a-template-f subtitle" data-id="I176:2335;170:1770;51:1732">XYZ was a great project</p><div class="client-info" data-id="I176:2335;170:1770;51:1733"><div class="author-images-LxwGUM author-images" data-id="I176:2335;170:1770;176:3100-67016cc3-46f4-41c6-bda9-a2502016e0d0"></div><div class="rate" data-id="I176:2335;170:1770;51:1735"><div class="rate-stars" data-id="I176:2335;170:1770;170:3387"><article class="star-d3QE9v" data-id="I176:2335;170:1770;170:3387;170:3373"><img class="star-NjG8s3" data-id="I176:2335;170:1770;170:3387;170:3373;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/star-15@2x.png" alt="Star"></article><article class="star-y2r4xN" data-id="I176:2335;170:1770;170:3387;170:3375"><img class="star-IMW2V8" data-id="I176:2335;170:1770;170:3387;170:3375;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/star-15@2x.png" alt="Star"></article><article class="star-OdwoHZ" data-id="I176:2335;170:1770;170:3387;170:3377"><img class="star-2Fnw39" data-id="I176:2335;170:1770;170:3387;170:3377;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/star-15@2x.png" alt="Star"></article><article class="star-uvK1BR" data-id="I176:2335;170:1770;170:3387;170:3379"><img class="star-wT62aR" data-id="I176:2335;170:1770;170:3387;170:3379;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/star-15@2x.png" alt="Star"></article><article class="star-85mGhA" data-id="I176:2335;170:1770;170:3387;170:3381"><img class="star-xFxYDc" data-id="I176:2335;170:1770;170:3387;170:3381;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/star-15@2x.png" alt="Star"></article></div><div class="gemma-nolen-google body-text" data-id="I176:2335;170:1770;51:1737">Gemma Nolen, <br>Google</div></div></div></div></article><article class="client-card-mobile" data-id="I176:2335;170:2201"><div class="client-card" data-id="I176:2335;170:2201;51:1731"><p class="this-is-a-template-f-kKGtuY this-is-a-template-f subtitle" data-id="I176:2335;170:2201;51:1732">YY was AMAZING!!! very happy with the finished product</p><div class="client-info" data-id="I176:2335;170:2201;51:1733"><div class="author-images-OLDYja author-images" data-id="I176:2335;170:2201;176:3100-384fa050-cff8-41fa-9aa4-f68bd3510f7d"></div><div class="rate" data-id="I176:2335;170:2201;51:1735"><div class="rate-stars" data-id="I176:2335;170:2201;170:3387"><article class="star-cizbR9" data-id="I176:2335;170:2201;170:3387;170:3373"><img class="star-oPcPeB" data-id="I176:2335;170:2201;170:3387;170:3373;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/star-20@2x.png" alt="Star"></article><article class="star-gvQ3xw" data-id="I176:2335;170:2201;170:3387;170:3375"><img class="star-dVmYdK" data-id="I176:2335;170:2201;170:3387;170:3375;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/star-20@2x.png" alt="Star"></article><article class="star-TDaxhA" data-id="I176:2335;170:2201;170:3387;170:3377"><img class="star-jDWHXu" data-id="I176:2335;170:2201;170:3387;170:3377;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/star-20@2x.png" alt="Star"></article><article class="star-FWbQuu" data-id="I176:2335;170:2201;170:3387;170:3379"><img class="star-lGfnMO" data-id="I176:2335;170:2201;170:3387;170:3379;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/star-20@2x.png" alt="Star"></article><article class="star-MaHxOc" data-id="I176:2335;170:2201;170:3387;170:3381"><img class="star-qcDByt" data-id="I176:2335;170:2201;170:3387;170:3381;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/star-20@2x.png" alt="Star"></article></div><div class="gemma-nolen-google body-text" data-id="I176:2335;170:2201;51:1737">Gemma Nolen, <br>Google</div></div></div></div></article><article class="client-card-mobile" data-id="I176:2335;170:2320"><div class="client-card" data-id="I176:2335;170:2320;51:1731"><p class="this-is-a-template-f-teeBkN this-is-a-template-f subtitle" data-id="I176:2335;170:2320;51:1732">Really appreciated the work from Areeb great stuff</p><div class="client-info" data-id="I176:2335;170:2320;51:1733"><div class="author-images-QeozJx author-images" data-id="I176:2335;170:2320;176:3100-43623a80-433a-4fa2-a902-56fd7af95689"></div><div class="rate" data-id="I176:2335;170:2320;51:1735"><div class="rate-stars" data-id="I176:2335;170:2320;170:3387"><article class="star-kPwdeL" data-id="I176:2335;170:2320;170:3387;170:3373"><img class="star-zavPZw" data-id="I176:2335;170:2320;170:3387;170:3373;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/star-15@2x.png" alt="Star"></article><article class="star-oyb6nZ" data-id="I176:2335;170:2320;170:3387;170:3375"><img class="star-EE48Ot" data-id="I176:2335;170:2320;170:3387;170:3375;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/star-15@2x.png" alt="Star"></article><article class="star-CvaQcy" data-id="I176:2335;170:2320;170:3387;170:3377"><img class="star-ufZLGY" data-id="I176:2335;170:2320;170:3387;170:3377;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/star-15@2x.png" alt="Star"></article><article class="star-iYCWb7" data-id="I176:2335;170:2320;170:3387;170:3379"><img class="star-8kEKOL" data-id="I176:2335;170:2320;170:3387;170:3379;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/star-15@2x.png" alt="Star"></article><article class="star-ngj32E" data-id="I176:2335;170:2320;170:3387;170:3381"><img class="star-gql8yY" data-id="I176:2335;170:2320;170:3387;170:3381;170:3290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/star-15@2x.png" alt="Star"></article></div><div class="gemma-nolen-google body-text" data-id="I176:2335;170:2320;51:1737">Gemma Nolen, <br>Google</div></div></div></div></article></div></div></div><footer class="footer-525ISW" data-id="176:2336" id="footer"><div class="footer-info-to8D40 footer-info" data-id="I176:2336;170:4264"><div class="footer-info-q5NGs8 footer-info" data-id="I176:2336;170:4266"><div class="contact-info-inqxF4" data-id="I176:2336;170:4267"><div class="footer-message-xlDmyM" data-id="I176:2336;170:4268"><div class="lets-work-together-NOT9ej epilogue-semi-bold-thunder-32px" data-id="I176:2336;170:4269">Let’s work together</div><p class="leave-your-message-v-NOT9ej body-text" data-id="I176:2336;170:4270">Leave your message via email or contact me via the links below!!</p></div><div class="social-icons-xlDmyM" data-id="I176:2336;170:4271"><a href="https://www.instagram.com/animaapp/?hl=en" target="_blank"><img class="nstagram-xQBFCV" data-id="I176:2336;170:4272" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/nstagram-3@2x.png" alt="nstagram"></a><a href="https://www.behance.net/Anima_design" target="_blank"><img class="behance-xQBFCV behance" data-id="I176:2336;170:4274" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/behance-5@2x.png" alt="behance"></a><a href="https://dribbble.com/animaapp" target="_blank"><img class="dribbble-xQBFCV" data-id="I176:2336;170:4276" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/dribbble-5@2x.png" alt="dribbble"></a><a href="https://www.facebook.com/animaapp/" target="_blank"><img class="facebook-xQBFCV" data-id="I176:2336;170:4278" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/facebook-3@2x.png" alt="facebook"></a><a href="https://discord.com/invite/eQxkYTNxSp" target="_blank"><img class="discord-xQBFCV" data-id="I176:2336;170:4280" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67115479cffb64ecc21eb4d5/img/discord-3@2x.png" alt="discord"></a></div></div><div class="text-fields-inqxF4 text-fields" data-id="I176:2336;170:4282"><div class="text-fields-sAISsO text-fields" data-id="I176:2336;170:4283"><article class="text-input-desktop" data-id="I176:2336;170:4284"><input class="write-something-bKxfWU body-text" data-id="I176:2336;170:4284;33:3158" name="writesomething" placeholder="Name" type="text"></article><article class="text-input-desktop" data-id="I176:2336;170:4285"><input class="write-something-zNswIb body-text" data-id="I176:2336;170:4285;33:3158" name="writesomething" placeholder="Email" type="email"></article><article class="text-input-desktop" data-id="I176:2336;170:4286"><textarea class="write-something-ZRfsuR body-text" data-id="I176:2336;170:4286;33:3158" name="writesomething" placeholder="Type your message here" type="text"></textarea></article></div><div class="button-sAISsO" data-id="I176:2336;170:4287"><a href="javascript:SubmitForm('form3')"><div class="submit-EAK0pP valign-text-middle subtitle" data-id="I176:2336;170:4287;33:3153">Submit</div></a></div></div></div></div></footer></form><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script><script>/* Copyright (c) 2016 Tobias Buschor https://goo.gl/gl0mbf | MIT License https://goo.gl/HgajeK */
+
+if (!HTMLFormElement.prototype.reportValidity) {
+    HTMLFormElement.prototype.reportValidity = function () {
+        if (this.checkValidity()) return true;
+        var btn = document.createElement('button');
+        this.appendChild(btn);
+        btn.click();
+        this.removeChild(btn);
+        return false;
+    };
+}
+
+function SubmitForm(form_name) {
+    var form = document.getElementsByName(form_name)[0];
+    if (form.reportValidity()) {
+        form.submit();
+        if (window.submitted) window.submitted();
+    }
+}</script></body></html>

@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+17/10/2024 19:47:45 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script><script src="https://animaapp.s3.amazonaws.com/launchpad-static/launchpad.js"></script><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Epilogue:500,400,700,600");
+
+
+@font-face {
+  font-family: "Futura-Bold-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/62494169fb257b1c34729f24/fonts/futura-bold-font.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Futura Md BT-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/60cf4b0d73ed244cdd4d91ff/fonts/futura-md-bt-medium.ttf') format("truetype");
+}
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/671129df16510087aa995fd6.671129e016510087aa995fd9.9QPRdSo.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #2d2d2d;
+  --black-2: #000000;
+  --black-3: #00000033;
+  --fog: #e3ceff;
+  --gossamer: #009379;
+  --grandis: #ffd285;
+  --iron: #d7d7d7;
+  --meteorite: #492578;
+  --quarter-pearl-lusta: #fffcf5;
+  --white: #ffffff;
+  --wild-sand: #f3f3f3;
+ 
+  --font-size-l: 20px;
+  --font-size-m: 17px;
+  --font-size-s: 16px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 27px;
+  --font-size-xxxl: 32px;
+  --font-size-xxxxl: 40px;
+ 
+  --font-family-epilogue: "Epilogue", Helvetica;
+  --font-family-futura-bold-regular: "Futura-Bold-Regular", Helvetica;
+  --font-family-futura_md_bt-medium: "Futura Md BT-Medium", Helvetica;
+}
+.subtitle {
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+
+.body-text {
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+.h3 {
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+
+.h2 {
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.futura-bold-regular-normal-thunder-20px {
+  color: var(--black);
+  font-family: var(--font-family-futura-bold-regular);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.epilogue-bold-thunder-17px {
+  color: var(--black);
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.epilogue-semi-bold-thunder-32px {
+  color: var(--black);
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.futuramdbt-medium-meteorite-24px {
+  color: var(--meteorite);
+  font-family: var(--font-family-futura_md_bt-medium);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.epilogue-semi-bold-fog-16px {
+  color: var(--fog);
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
+}
+
+:root {
+}
+
+
+.author-images {
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-size: cover;
+  border: 1px solid;
+  border-color: var(--iron);
+  border-radius: 100px;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  width: 50px;
+}
+
+.client-card {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 80px;
+  margin-right: -28.00px;
+  position: relative;
+}
+
+.client-info {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 20px;
+  position: relative;
+}
+
+.ellipse {
+  background-color: var(--meteorite);
+  border-radius: 4px;
+  height: 34.78%;
+  position: absolute;
+  width: 32.00%;
+}
+
+.gemma-nolen-google {
+  background-color: transparent;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  position: relative;
+  text-align: left;
+  width: 193px;
+}
+
+.headline-subhead {
+  align-items: flex-start;
+  background-color: transparent;
+  flex-direction: column;
+  position: relative;
+}
+
+.logo {
+  background-color: transparent;
+  position: absolute;
+}
+
+.main-title {
+  background-color: transparent;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 42px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: 249.89915466308594px;
+}
+
+.project-title {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: 315px;
+}
+
+.rate {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.rate-stars {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 5px;
+  position: relative;
+}
+
+.this-is-a-template-f {
+  background-color: transparent;
+  color: var(--black);
+  font-style: normal;
+  position: relative;
+}
+
+.ui-art-drection {
+  background-color: transparent;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  position: relative;
+  text-align: left;
+  width: 315px;
+}
+
+.colored-text {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 5px 0px;
+  position: relative;
+  width: 100%;
+}
+
+.paragraph {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0.00px;
+  line-height: 26px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+}
+
+.span1 {
+  color: var(--black);
+  font-style: normal;
+}
+/* screen - 1280px-about-page */
+
+.x1280px-about-page {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  left: 0px;
+  min-width: 1280px;
+  overflow-x: hidden;
+  position: relative;
+  top: 0px;
+}
+
+.x1280px-about-page .navigation-ao1UaT {
+  align-self: stretch;
+  background-color: var(--white);
+  height: 80px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.x1280px-about-page .nav-nav-menu-WxxmS2 {
+  background-color: transparent;
+  height: 28px;
+  position: absolute;
+  right: 28px;
+  top: calc(50.00% - 14px);
+  width: 283px;
+}
+
+.x1280px-about-page .about-heBuuf {
+  background-color: transparent;
+  height: 28px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  right: 217px;
+  text-align: left;
+  top: calc(50.00% - 14px);
+  white-space: nowrap;
+  width: auto;
+}
+
+.x1280px-about-page .work-heBuuf {
+  background-color: transparent;
+  cursor: pointer;
+  height: 28px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  right: 125px;
+  text-align: left;
+  top: calc(50.00% - 14px);
+  white-space: nowrap;
+  width: auto;
+}
+
+.x1280px-about-page .contact-heBuuf {
+  background-color: transparent;
+  cursor: pointer;
+  height: 28px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  right: 6px;
+  text-align: left;
+  top: calc(50.00% - 14px);
+  white-space: nowrap;
+  width: auto;
+}
+
+.x1280px-about-page .logo-WxxmS2 {
+  cursor: pointer;
+  height: 30px;
+  left: 50px;
+  top: calc(50.00% - 15px);
+  width: 49px;
+}
+
+.x1280px-about-page .logo-ttHV4F {
+  color: var(--black);
+  font-family: var(--font-family-futura-bold-regular);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 400;
+  height: 100%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 526.53%;
+}
+
+.x1280px-about-page .about-header-ao1UaT {
+  align-self: stretch;
+  background-color: var(--fog);
+  flex-direction: column;
+  gap: 10px;
+  padding: 120px 320px;
+  width: 100%;
+}
+
+.x1280px-about-page .about-header-UAIB4B {
+  background-color: transparent;
+  gap: 70px;
+  margin-left: -70.00px;
+  margin-right: -70.00px;
+  width: 780px;
+}
+
+.x1280px-about-page .persona-I8yVwT {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.x1280px-about-page .image-h2jehG {
+  position: relative;
+}
+
+.x1280px-about-page .image-eM2aOC {
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+}
+
+.x1280px-about-page .image-outline-eM2aOC {
+  background-color: transparent;
+  border: 1.5px solid;
+  border-color: var(--black);
+  height: 195px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 195px;
+}
+
+.x1280px-about-page .designer-full-name-m-h2jehG {
+  background-color: transparent;
+  height: 82.52351379394531px;
+  letter-spacing: 0.00px;
+  line-height: 27px;
+  position: relative;
+  text-align: left;
+  width: 195px;
+}
+
+.x1280px-about-page .span0-8i4EhC {
+  text-decoration: underline;
+}
+
+.x1280px-about-page .span1-8i4EhC {
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+}
+
+.x1280px-about-page .bio-text-I8yVwT {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 27px;
+  position: relative;
+  text-align: left;
+  width: 515px;
+}
+
+.x1280px-about-page .span0-0ZhOGm {
+}
+
+.x1280px-about-page .span1-0ZhOGm {
+  font-weight: 400;
+}
+
+.x1280px-about-page .body-ao1UaT {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  padding: 120px 320px;
+  position: relative;
+  width: 100%;
+}
+
+.x1280px-about-page .body-text-yMli1U {
+  align-items: center;
+  gap: 60px;
+  justify-content: center;
+  margin-left: -120.00px;
+  margin-right: -120.00px;
+  width: 880px;
+}
+
+.x1280px-about-page .text-iAn5FS {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+  width: 100%;
+}
+
+.x1280px-about-page .title-A5eob5 {
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--meteorite);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+}
+
+.x1280px-about-page .body-text-A5eob5 {
+  align-items: flex-start;
+  align-self: stretch;
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.x1280px-about-page .colored-text-eKcpWh {
+  background-color: var(--gossamer);
+}
+
+.x1280px-about-page .colored-text-7WyXLO {
+  background-color: transparent;
+}
+
+.x1280px-about-page .paragraph-D7i9rk {
+  color: #3b3b3b;
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.x1280px-about-page .colored-text-0VjD9Q {
+  background-color: var(--gossamer);
+}
+
+.x1280px-about-page .colored-text-za8h8L {
+  background-color: transparent;
+}
+
+.x1280px-about-page .paragraph-4HLmii {
+  color: #2b2b2b;
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.x1280px-about-page .footer-ao1UaT {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0px 100px 70px;
+  position: relative;
+  width: 100%;
+}
+
+.x1280px-about-page .footer-info-9N1haN {
+  align-items: center;
+  border-bottom-style: none;
+  border-color: var(--black-3);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 2px;
+  flex-direction: column;
+  gap: 70px;
+  padding: 70px 0px 0px;
+}
+
+.x1280px-about-page .footer-info-YNSg2r {
+  align-items: flex-start;
+  gap: 190px;
+}
+
+.x1280px-about-page .contact-info-E8z5Jb {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+}
+
+.x1280px-about-page .footer-message-eCR0Uz {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+}
+
+.x1280px-about-page .lets-work-together-Hxtp5y {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 42px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: 360px;
+}
+
+.x1280px-about-page .leave-your-message-v-Hxtp5y {
+  background-color: transparent;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  position: relative;
+  text-align: left;
+  width: 360px;
+}
+
+.x1280px-about-page .social-icons-eCR0Uz {
+  background-color: transparent;
+  height: 36px;
+  position: relative;
+  width: 232px;
+}
+
+.x1280px-about-page .nstagram-Whj6SY {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% + 31px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x1280px-about-page .behance-Whj6SY {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% + 80px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x1280px-about-page .dribbble-Whj6SY {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% - 18px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x1280px-about-page .facebook-Whj6SY {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% - 67px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x1280px-about-page .discord-Whj6SY {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% - 116px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x1280px-about-page .text-fields-E8z5Jb {
+  gap: 40px;
+}
+
+.x1280px-about-page .text-fields-H9blgS {
+  gap: 20px;
+}
+
+.x1280px-about-page .write-something-xgmu4a {
+  background-color: transparent;
+  border: 0;
+  color: var(--black);
+  flex: 1;
+  flex-grow: 1;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: -1.00px;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: left;
+}
+
+.x1280px-about-page .write-something-xgmu4a::placeholder {
+  color: #2d2d2d99;
+}
+
+.x1280px-about-page .write-something-ti9AEt {
+  background-color: transparent;
+  border: 0;
+  color: var(--black);
+  flex: 1;
+  flex-grow: 1;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: -1.00px;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: left;
+}
+
+.x1280px-about-page .write-something-ti9AEt::placeholder {
+  color: #2d2d2d99;
+}
+
+.x1280px-about-page .write-something-BOi2kt {
+  background-color: transparent;
+  border: 0;
+  color: var(--black);
+  flex: 1;
+  flex-grow: 1;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: -1.00px;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: left;
+}
+
+.x1280px-about-page .write-something-BOi2kt::placeholder {
+  color: #2d2d2d99;
+}
+
+.x1280px-about-page .button-H9blgS {
+  align-items: flex-start;
+  background-color: var(--black);
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 25px 82px;
+  position: relative;
+}
+
+.x1280px-about-page .submit-vyNcY2 {
+  background-color: transparent;
+  color: var(--white);
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.x1280px-about-page .about-header {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  position: relative;
+}
+
+.x1280px-about-page .body-text {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.x1280px-about-page .footer-info {
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.x1280px-about-page .image {
+  background-color: transparent;
+  height: 195px;
+  width: 195px;
+}
+
+.x1280px-about-page .text-fields {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+}
+
+.x1280px-about-page .text-input-desktop {
+  align-items: flex-start;
+  background-color: var(--wild-sand);
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 21px 30px;
+  position: relative;
+  width: 530px;
+}
+/* screen - 375px-about-page */
+
+.x375px-about-page {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex-direction: column;
+  left: 0px;
+  overflow-x: hidden;
+  position: relative;
+  top: 0px;
+}
+
+.x375px-about-page .navigation-XSCoLj {
+  align-self: stretch;
+  background-color: var(--white);
+  height: 80px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.x375px-about-page .logo-lxyBcy {
+  cursor: pointer;
+  height: 30px;
+  left: 50px;
+  top: calc(50.00% - 15px);
+  width: 49px;
+}
+
+.x375px-about-page .logo-tQ0zBi {
+  height: 100%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 263.27%;
+}
+
+.x375px-about-page .menu-lxyBcy {
+  background-color: transparent;
+  height: 23px;
+  position: absolute;
+  right: 50px;
+  top: calc(50.00% - 12px);
+  width: 25px;
+}
+
+.x375px-about-page .ellipse-9IzNKz {
+  left: 68.00%;
+  top: 0px;
+}
+
+.x375px-about-page .ellipse-aTb5zx {
+  left: 68.00%;
+  top: 65.22%;
+}
+
+.x375px-about-page .ellipse-SMMK3E {
+  left: 0px;
+  top: 0px;
+}
+
+.x375px-about-page .ellipse-AAIcdJ {
+  left: 0px;
+  top: 65.22%;
+}
+
+.x375px-about-page .about-header-XSCoLj {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--fog);
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 120px 30px;
+  width: 100%;
+}
+
+.x375px-about-page .about-header-SM5wAe {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  gap: 78px;
+}
+
+.x375px-about-page .persona-qyX3Ju {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.x375px-about-page .image-HJ9nx4 {
+  position: relative;
+}
+
+.x375px-about-page .image-kMyZoe {
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+}
+
+.x375px-about-page .image-outline-kMyZoe {
+  background-color: transparent;
+  border: 1.5px solid;
+  border-color: var(--black);
+  height: 195px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 195px;
+}
+
+.x375px-about-page .designer-full-name-m-HJ9nx4 {
+  background-color: transparent;
+  height: 82.52351379394531px;
+  letter-spacing: 0.00px;
+  line-height: 27px;
+  position: relative;
+  text-align: left;
+  width: 195px;
+}
+
+.x375px-about-page .span0-FIoNbP {
+  text-decoration: underline;
+}
+
+.x375px-about-page .span1-FIoNbP {
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+}
+
+.x375px-about-page .bio-text-qyX3Ju {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 27px;
+  position: relative;
+  text-align: left;
+  width: 315px;
+}
+
+.x375px-about-page .span0-9qnTQs {
+}
+
+.x375px-about-page .span1-9qnTQs {
+  font-weight: 400;
+}
+
+.x375px-about-page .body-XSCoLj {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  padding: 120px 30px;
+  position: relative;
+  width: 100%;
+}
+
+.x375px-about-page .body-text-PfZ17V {
+  gap: 60px;
+  width: 315px;
+}
+
+.x375px-about-page .text-IKJ59m {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+  width: 100%;
+}
+
+.x375px-about-page .title-aurmdg {
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--meteorite);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+}
+
+.x375px-about-page .body-text-aurmdg {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.x375px-about-page .colored-text-q17zsC {
+  background-color: var(--gossamer);
+}
+
+.x375px-about-page .colored-text-eFyGGx {
+  background-color: transparent;
+}
+
+.x375px-about-page .paragraph-T5vDaF {
+  color: #3b3b3b;
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.x375px-about-page .colored-text-fp4HYU {
+  background-color: var(--gossamer);
+}
+
+.x375px-about-page .colored-text-hiH6On {
+  background-color: transparent;
+}
+
+.x375px-about-page .paragraph-kUvMDi {
+  color: #2b2b2b;
+  font-family: var(--font-family-epilogue);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.x375px-about-page .footer-XSCoLj {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0px 30px 70px;
+  position: relative;
+  width: 100%;
+}
+
+.x375px-about-page .footer-info-2YOnzL {
+  align-items: center;
+  border-bottom-style: none;
+  border-color: var(--black-3);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 2px;
+  display: inline-flex;
+  gap: 70px;
+  padding: 70px 0px 0px;
+}
+
+.x375px-about-page .footer-info-CxVS2H {
+  align-items: flex-start;
+  display: flex;
+  gap: 80px;
+  width: 315px;
+}
+
+.x375px-about-page .contact-info-d4EyKW {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+  width: 315px;
+}
+
+.x375px-about-page .footer-message-BGMzCQ {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  width: 315px;
+}
+
+.x375px-about-page .lets-work-together-YxH4mx {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 42px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: 315px;
+}
+
+.x375px-about-page .leave-your-message-v-YxH4mx {
+  background-color: transparent;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  position: relative;
+  text-align: left;
+  width: 315px;
+}
+
+.x375px-about-page .social-icons-BGMzCQ {
+  background-color: transparent;
+  height: 36px;
+  position: relative;
+  width: 232px;
+}
+
+.x375px-about-page .nstagram-YhJxCy {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% + 31px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x375px-about-page .behance-YhJxCy {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% + 80px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x375px-about-page .dribbble-YhJxCy {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% - 18px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x375px-about-page .facebook-YhJxCy {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% - 67px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x375px-about-page .discord-YhJxCy {
+  background-color: transparent;
+  cursor: pointer;
+  height: 36px;
+  left: calc(50.00% - 116px);
+  position: absolute;
+  top: calc(50.00% - 18px);
+  width: 36px;
+}
+
+.x375px-about-page .text-fields-d4EyKW {
+  display: inline-flex;
+  gap: 40px;
+}
+
+.x375px-about-page .text-fields-KEkx5Q {
+  display: flex;
+  gap: 20px;
+  width: 315px;
+}
+
+.x375px-about-page .write-something-35peeA {
+  background-color: transparent;
+  border: 0;
+  color: var(--black);
+  flex: 1;
+  flex-grow: 1;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: -1.00px;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: left;
+}
+
+.x375px-about-page .write-something-35peeA::placeholder {
+  color: #2d2d2d99;
+}
+
+.x375px-about-page .write-something-0BwJ0N {
+  background-color: transparent;
+  border: 0;
+  color: var(--black);
+  flex: 1;
+  flex-grow: 1;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: -1.00px;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: left;
+}
+
+.x375px-about-page .write-something-0BwJ0N::placeholder {
+  color: #2d2d2d99;
+}
+
+.x375px-about-page .write-something-exNyCB {
+  background-color: transparent;
+  border: 0;
+  color: var(--black);
+  flex: 1;
+  flex-grow: 1;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: -1.00px;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-align: left;
+}
+
+.x375px-about-page .write-something-exNyCB::placeholder {
+  color: #2d2d2d99;
+}
+
+.x375px-about-page .button-KEkx5Q {
+  align-items: flex-start;
+  background-color: var(--black);
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 25px 82px;
+  position: relative;
+}
+
+.x375px-about-page .submit-588GVq {
+  background-color: transparent;
+  color: var(--white);
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.x375px-about-page .about-header {
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+}
+
+.x375px-about-page .body-text {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.x375px-about-page .footer-info {
+  background-color: transparent;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+}
+
+.x375px-about-page .image {
+  background-color: transparent;
+  height: 195px;
+  width: 195px;
+}
+
+.x375px-about-page .text-fields {
+  align-items: flex-start;
+  background-color: transparent;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+}
+
+.x375px-about-page .text-input-desktop {
+  align-items: flex-start;
+  background-color: var(--wild-sand);
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 21px 30px;
+  position: relative;
+  width: 315px;
+}
+@media screen and (max-width: 1279px) {
+  .screen.x1280px-about-page { 
+    display: none;
+   }
+}
+@media screen and (min-width: 1280px) {
+  .screen.x375px-about-page { 
+    display: none;
+   }
+}
+</style></head><body style="margin: 0;"><input type="hidden" id="anPageName" name="page" value="1280px-about-page"><form class="x1280px-about-page screen " data-id="176:2345" name="form2" action="form2" method="post"><input type="text" name="trapit" value="" style="display:none;"><div class="navigation-ao1UaT" data-id="176:2346"><div class="nav-nav-menu-WxxmS2" data-id="I176:2346;33:558"><div class="about-heBuuf valign-text-middle futuramdbt-medium-meteorite-24px" data-id="I176:2346;33:550">About</div><a href="https://www.animaapp.com/?utm_source=figma-samples&utm_campaign=figma-portfolio22&utm_medium=figma-samples" target="_blank"><div class="work-heBuuf valign-text-middle futuramdbt-medium-meteorite-24px" data-id="I176:2346;33:551">Work</div></a><a href="#footer"><div class="contact-heBuuf valign-text-middle futuramdbt-medium-meteorite-24px" data-id="I176:2346;33:552">Contact</div></a></div><a href="1280px-portfolio-template"><div class="logo-WxxmS2 logo" data-id="I176:2346;33:556"><h1 class="logo-ttHV4F valign-text-middle logo" data-id="I176:2346;33:556;33:554">Areeb Sadiq</h1></div></a></div><div class="about-header-ao1UaT about-header" data-id="176:2347"><div class="about-header-UAIB4B about-header" data-id="I176:2347;39:4630"><div class="persona-I8yVwT" data-id="I176:2347;39:4629"><div class="image-h2jehG image" data-id="I176:2347;39:4625"><img class="image-eM2aOC image" data-id="I176:2347;39:4626" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67114a05fc1f426fce2fe492/img/image-8.png" alt="Image"><div class="image-outline-eM2aOC" data-id="I176:2347;39:4627"></div></div><p class="designer-full-name-m-h2jehG epilogue-bold-thunder-17px" data-id="I176:2347;39:4624"><span class="span0-8i4EhC epilogue-bold-thunder-17px">Areeb Sadiq<br></span><span class="span1-8i4EhC span1">Interaction Design<br>student 3rd year</span></p></div><p class="bio-text-I8yVwT valign-text-middle epilogue-bold-thunder-17px" data-id="I176:2347;39:4622"><span><span class="span0-0ZhOGm epilogue-bold-thunder-17px">Bio:</span><span class="span1-0ZhOGm span1 body-text">Currently a student at PES university pursuing a bachelors in design. motivated to make a difference in this world by learning to help others one hand at a time.</span></span></p></div></div><div class="body-ao1UaT" data-id="176:2348"><div class="body-text-yMli1U body-text" data-id="I176:2348;39:4712"><div class="text-iAn5FS" data-id="I176:2348;75:1665"><h2 class="title-A5eob5 h2" data-id="I176:2348;75:1666">“Staying abreast of the latest trends is crucial in the fluid world of design. I have a&nbsp;&nbsp;knack for spotting emerging trends and identifying the outliers that&nbsp;&nbsp;signal new movements. My ultimate goal is to develop efficient systems&nbsp;&nbsp;that benefit all users, making their interactions with technology as&nbsp;&nbsp;smooth and enjoyable as possible.”</h2><div class="body-text-A5eob5 body-text" data-id="I176:2348;75:1667"><div class="colored-text-eKcpWh colored-text" data-id="I176:2348;75:1670"><p class="paragraph epilogue-semi-bold-fog-16px" data-id="I176:2348;75:1671">As a designer with a passion for&nbsp;&nbsp;research-driven design, I thrive on uncovering insights from data to&nbsp;&nbsp;create efficient and user-friendly solutions. My design philosophy&nbsp;&nbsp;blends the principles of &#34;form follows function&#34; and &#34;function follows&nbsp;&nbsp;form,&#34; allowing for a seamless integration of aesthetics and usability.</p></div><div class="colored-text-7WyXLO colored-text" data-id="I176:2348;75:1672"><p class="paragraph-D7i9rk paragraph" data-id="I176:2348;75:1673">My journey into design was fueled by a desire to solve problems&nbsp;&nbsp;creatively. I found my niche in interaction design, where the&nbsp;&nbsp;ever-changing challenges keep me engaged and constantly learning. I&nbsp;&nbsp;believe in keeping the user at the heart of the design process,&nbsp;&nbsp;empathizing with their needs, and ensuring their involvement at every&nbsp;&nbsp;stage.</p></div><div class="colored-text-0VjD9Q colored-text" data-id="I176:2348;75:1674"><p class="paragraph epilogue-semi-bold-fog-16px" data-id="I176:2348;75:1675">Inspired by the free-thinking spirit of then outsider art&nbsp;&nbsp;movement , I bring a unique perspective to my work. My iterative&nbsp;&nbsp;approach helps me refine and perfect my designs, ensuring they meet the&nbsp;&nbsp;highest standards of functionality and beauty.</p></div><div class="colored-text-za8h8L colored-text" data-id="I176:2348;75:1676"><p class="paragraph-4HLmii paragraph" data-id="I176:2348;75:1677">Available for projects, from Monday to Thursday , mainly between 10 am to 6 pm IST</p></div></div></div></div></div><footer class="footer-ao1UaT" data-id="176:2349" id="footer"><div class="footer-info-9N1haN footer-info" data-id="I176:2349;170:4264"><div class="footer-info-YNSg2r footer-info" data-id="I176:2349;170:4266"><div class="contact-info-E8z5Jb" data-id="I176:2349;170:4267"><div class="footer-message-eCR0Uz" data-id="I176:2349;170:4268"><div class="lets-work-together-Hxtp5y epilogue-semi-bold-thunder-32px" data-id="I176:2349;170:4269">Let’s work together</div><p class="leave-your-message-v-Hxtp5y body-text" data-id="I176:2349;170:4270">Leave your message via email or contact me via the links below!!</p></div><div class="social-icons-eCR0Uz" data-id="I176:2349;170:4271"><a href="https://www.instagram.com/animaapp/?hl=en" target="_blank"><img class="nstagram-Whj6SY" data-id="I176:2349;170:4272" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67114a05fc1f426fce2fe492/img/nstagram@2x.png" alt="nstagram"></a><a href="https://www.behance.net/Anima_design" target="_blank"><img class="behance-Whj6SY" data-id="I176:2349;170:4274" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67114a05fc1f426fce2fe492/img/behance@2x.png" alt="behance"></a><a href="https://dribbble.com/animaapp" target="_blank"><img class="dribbble-Whj6SY" data-id="I176:2349;170:4276" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67114a05fc1f426fce2fe492/img/dribbble@2x.png" alt="dribbble"></a><a href="https://www.facebook.com/animaapp/" target="_blank"><img class="facebook-Whj6SY" data-id="I176:2349;170:4278" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67114a05fc1f426fce2fe492/img/facebook@2x.png" alt="facebook"></a><a href="https://discord.com/invite/eQxkYTNxSp" target="_blank"><img class="discord-Whj6SY" data-id="I176:2349;170:4280" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67114a05fc1f426fce2fe492/img/discord@2x.png" alt="discord"></a></div></div><div class="text-fields-E8z5Jb text-fields" data-id="I176:2349;170:4282"><div class="text-fields-H9blgS text-fields" data-id="I176:2349;170:4283"><article class="text-input-desktop" data-id="I176:2349;170:4284"><input class="write-something-xgmu4a body-text" data-id="I176:2349;170:4284;33:3158" name="writesomething" placeholder="Name" type="text"></article><article class="text-input-desktop" data-id="I176:2349;170:4285"><input class="write-something-ti9AEt body-text" data-id="I176:2349;170:4285;33:3158" name="writesomething" placeholder="Email" type="email"></article><article class="text-input-desktop" data-id="I176:2349;170:4286"><textarea class="write-something-BOi2kt body-text" data-id="I176:2349;170:4286;33:3158" name="writesomething" placeholder="Type your message here" type="text"></textarea></article></div><div class="button-H9blgS" data-id="I176:2349;170:4287"><a href="javascript:SubmitForm('form2')"><div class="submit-vyNcY2 valign-text-middle subtitle" data-id="I176:2349;170:4287;33:3153">Submit</div></a></div></div></div></div></footer></form><form class="x375px-about-page screen " data-id="176:2350" name="form4" action="form4" method="post"><input type="text" name="trapit" value="" style="display:none;"><div class="navigation-XSCoLj" data-id="176:2351"><a href="375px-portfolio-template"><div class="logo-lxyBcy logo" data-id="I176:2351;55:1461"><div class="logo-tQ0zBi valign-text-middle logo futura-bold-regular-normal-thunder-20px" data-id="I176:2351;55:1461;33:554">Areeb Sadiq</div></div></a><div class="menu-lxyBcy" data-id="I176:2351;55:1473"><div class="ellipse-9IzNKz ellipse" data-id="I176:2351;55:1473;55:1467"></div><div class="ellipse-aTb5zx ellipse" data-id="I176:2351;55:1473;55:1469"></div><div class="ellipse-SMMK3E ellipse" data-id="I176:2351;55:1473;55:1468"></div><div class="ellipse-AAIcdJ ellipse" data-id="I176:2351;55:1473;55:1470"></div></div></div><div class="about-header-XSCoLj about-header" data-id="176:2352"><div class="about-header-SM5wAe about-header" data-id="I176:2352;51:2007"><div class="persona-qyX3Ju" data-id="I176:2352;51:2008"><div class="image-HJ9nx4 image" data-id="I176:2352;51:2009"><img class="image-kMyZoe image" data-id="I176:2352;51:2010" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67114a05fc1f426fce2fe492/img/image-8.png" alt="Image"><div class="image-outline-kMyZoe" data-id="I176:2352;51:2011"></div></div><p class="designer-full-name-m-HJ9nx4 epilogue-bold-thunder-17px" data-id="I176:2352;51:2012"><span class="span0-FIoNbP epilogue-bold-thunder-17px">Areeb Sadiq<br></span><span class="span1-FIoNbP span1">Interaction Design<br>student 3rd year</span></p></div><p class="bio-text-qyX3Ju epilogue-bold-thunder-17px" data-id="I176:2352;51:2013"><span class="span0-9qnTQs epilogue-bold-thunder-17px">Bio:</span><span class="span1-9qnTQs span1 body-text">Currently a student at PES university pursuing a bachelors in design. motivated to make a difference in this world by learning to help others one hand at a time.</span></p></div></div><div class="body-XSCoLj" data-id="176:2353"><div class="body-text-PfZ17V body-text" data-id="I176:2353;75:1780"><div class="text-IKJ59m" data-id="I176:2353;75:1781"><h2 class="title-aurmdg h2" data-id="I176:2353;75:1782">“Staying abreast of the latest trends is crucial in the fluid world of design. I have a&nbsp;&nbsp;knack for spotting emerging trends and identifying the outliers that&nbsp;&nbsp;signal new movements. My ultimate goal is to develop efficient systems&nbsp;&nbsp;that benefit all users, making their interactions with technology as&nbsp;&nbsp;smooth and enjoyable as possible.”</h2><div class="body-text-aurmdg body-text" data-id="I176:2353;75:1783"><div class="colored-text-q17zsC colored-text" data-id="I176:2353;75:1786"><p class="paragraph epilogue-semi-bold-fog-16px" data-id="I176:2353;75:1787">As a designer with a passion for&nbsp;&nbsp;research-driven design, I thrive on uncovering insights from data to&nbsp;&nbsp;create efficient and user-friendly solutions. My design philosophy&nbsp;&nbsp;blends the principles of &#34;form follows function&#34; and &#34;function follows&nbsp;&nbsp;form,&#34; allowing for a seamless integration of aesthetics and usability.</p></div><div class="colored-text-eFyGGx colored-text" data-id="I176:2353;75:1788"><p class="paragraph-T5vDaF paragraph" data-id="I176:2353;75:1789">My journey into design was fueled by a desire to solve problems&nbsp;&nbsp;creatively. I found my niche in interaction design, where the&nbsp;&nbsp;ever-changing challenges keep me engaged and constantly learning. I&nbsp;&nbsp;believe in keeping the user at the heart of the design process,&nbsp;&nbsp;empathizing with their needs, and ensuring their involvement at every&nbsp;&nbsp;stage.</p></div><div class="colored-text-fp4HYU colored-text" data-id="I176:2353;75:1790"><p class="paragraph epilogue-semi-bold-fog-16px" data-id="I176:2353;75:1791">Inspired by the free-thinking spirit of then outsider art&nbsp;&nbsp;movement , I bring a unique perspective to my work. My iterative&nbsp;&nbsp;approach helps me refine and perfect my designs, ensuring they meet the&nbsp;&nbsp;highest standards of functionality and beauty.</p></div><div class="colored-text-hiH6On colored-text" data-id="I176:2353;75:1792"><p class="paragraph-kUvMDi paragraph" data-id="I176:2353;75:1793">Available for projects, from Monday to Thursday , mainly between 10 am to 6 pm IST</p></div></div></div></div></div><footer class="footer-XSCoLj" data-id="176:2354"><div class="footer-info-2YOnzL footer-info" data-id="I176:2354;176:1054"><div class="footer-info-CxVS2H footer-info" data-id="I176:2354;176:1055"><div class="contact-info-d4EyKW" data-id="I176:2354;176:1056"><div class="footer-message-BGMzCQ" data-id="I176:2354;176:1057"><h1 class="lets-work-together-YxH4mx epilogue-semi-bold-thunder-32px" data-id="I176:2354;176:1058">Let’s work together</h1><p class="leave-your-message-v-YxH4mx body-text" data-id="I176:2354;176:1059">Leave your message via email or contact me via the links below!!</p></div><div class="social-icons-BGMzCQ" data-id="I176:2354;176:1060"><a href="https://www.instagram.com/animaapp/?hl=en" target="_blank"><img class="nstagram-YhJxCy" data-id="I176:2354;176:1061" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67114a05fc1f426fce2fe492/img/nstagram-2@2x.png" alt="nstagram"></a><a href="https://www.behance.net/Anima_design" target="_blank"><img class="behance-YhJxCy" data-id="I176:2354;176:1063" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67114a05fc1f426fce2fe492/img/behance@2x.png" alt="behance"></a><a href="https://dribbble.com/animaapp" target="_blank"><img class="dribbble-YhJxCy" data-id="I176:2354;176:1065" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67114a05fc1f426fce2fe492/img/dribbble@2x.png" alt="dribbble"></a><a href="https://www.facebook.com/animaapp/" target="_blank"><img class="facebook-YhJxCy" data-id="I176:2354;176:1067" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67114a05fc1f426fce2fe492/img/facebook@2x.png" alt="facebook"></a><a href="https://discord.com/invite/eQxkYTNxSp" target="_blank"><img class="discord-YhJxCy" data-id="I176:2354;176:1069" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/671129e116510087aa995fdb/releases/67114a05fc1f426fce2fe492/img/discord@2x.png" alt="discord"></a></div></div><div class="text-fields-d4EyKW text-fields" data-id="I176:2354;176:1071"><div class="text-fields-KEkx5Q text-fields" data-id="I176:2354;176:1072"><article class="text-input-desktop" data-id="I176:2354;176:1073"><input class="write-something-35peeA body-text" data-id="I176:2354;176:1073;33:3158" name="writesomething" placeholder="Name" type="text"></article><article class="text-input-desktop" data-id="I176:2354;176:1074"><input class="write-something-0BwJ0N body-text" data-id="I176:2354;176:1074;33:3158" name="writesomething" placeholder="Email" type="email"></article><article class="text-input-desktop" data-id="I176:2354;176:1075"><textarea class="write-something-exNyCB body-text" data-id="I176:2354;176:1075;33:3158" name="writesomething" placeholder="Type your message here" type="text"></textarea></article></div><div class="button-KEkx5Q" data-id="I176:2354;176:1076"><a href="javascript:SubmitForm('form4')"><div class="submit-588GVq valign-text-middle subtitle" data-id="I176:2354;176:1076;33:3153">Submit</div></a></div></div></div></div></footer></form><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script><script>/* Copyright (c) 2016 Tobias Buschor https://goo.gl/gl0mbf | MIT License https://goo.gl/HgajeK */
+
+if (!HTMLFormElement.prototype.reportValidity) {
+    HTMLFormElement.prototype.reportValidity = function () {
+        if (this.checkValidity()) return true;
+        var btn = document.createElement('button');
+        this.appendChild(btn);
+        btn.click();
+        this.removeChild(btn);
+        return false;
+    };
+}
+
+function SubmitForm(form_name) {
+    var form = document.getElementsByName(form_name)[0];
+    if (form.reportValidity()) {
+        form.submit();
+        if (window.submitted) window.submitted();
+    }
+}</script></body></html>
